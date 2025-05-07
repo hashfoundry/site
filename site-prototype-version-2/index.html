@@ -1,0 +1,380 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashFoundry | Pioneering Web3 Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+        </button>
+    </div>
+    
+    <div class="language-selector">
+        <button id="lang-en" class="lang-btn active">EN</button>
+        <button id="lang-ru" class="lang-btn">RU</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-text">Hash<span class="highlight">Foundry</span></span>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link" data-en="About" data-ru="О нас">About</a></li>
+                    <li><a href="#solutions" class="nav-link" data-en="Solutions" data-ru="Решения">Solutions</a></li>
+                    <li><a href="#technology" class="nav-link" data-en="Technology" data-ru="Технологии">Technology</a></li>
+                    <li><a href="#ecosystem" class="nav-link" data-en="Ecosystem" data-ru="Экосистема">Ecosystem</a></li>
+                    <li><a href="#contact" class="nav-link" data-en="Contact" data-ru="Контакты">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-en="Building the Future of Web3 Infrastructure" data-ru="Создаем будущее инфраструктуры Web3">Building the Future of Web3 Infrastructure</h1>
+                    <p class="hero-subtitle" data-en="Pioneering the intersection of blockchain, AI, and decentralized applications." data-ru="Передовые технологии на стыке блокчейна, ИИ и децентрализованных приложений.">Pioneering the intersection of blockchain, AI, and decentralized applications.</p>
+                    <div class="hero-buttons">
+                        <a href="#solutions" class="btn primary" data-en="Explore Solutions" data-ru="Изучить решения">Explore Solutions</a>
+                        <a href="#contact" class="btn secondary" data-en="Connect With Us" data-ru="Связаться с нами">Connect With Us</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div id="blockchain-visualization"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="About HashFoundry" data-ru="О HashFoundry">About HashFoundry</h2>
+                <p class="section-subtitle" data-en="Pioneering the future of decentralized technologies" data-ru="Создаем будущее децентрализованных технологий">Pioneering the future of decentralized technologies</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/59c1fd70-2a9d-4993-d3a2-0ed212ba1600/public" alt="HashFoundry team collaborating on cutting-edge blockchain solutions in a modern tech workspace" width="600" height="400">
+                </div>
+                <div class="about-content">
+                    <h3 data-en="Our Vision" data-ru="Наше видение">Our Vision</h3>
+                    <p data-en="At HashFoundry, we're building the critical infrastructure for the decentralized future. Founded in 2023, our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world." data-ru="В HashFoundry мы создаем критически важную инфраструктуру для децентрализованного будущего. Основанная в 2023 году, наша команда ветеранов блокчейна, исследователей ИИ и инженеров распределенных систем создает фундамент для более открытого, безопасного и эффективного цифрового мира.">At HashFoundry, we're building the critical infrastructure for the decentralized future. Founded in 2023, our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world.</p>
+                    
+                    <h3 data-en="Our Mission" data-ru="Наша миссия">Our Mission</h3>
+                    <p data-en="We're on a mission to accelerate Web3 adoption by providing enterprise-grade infrastructure and tools that bridge the gap between traditional systems and decentralized technologies. Our AI-enhanced solutions make blockchain more accessible, scalable, and user-friendly for developers and enterprises alike." data-ru="Наша миссия — ускорить внедрение Web3, предоставляя инфраструктуру и инструменты корпоративного уровня, которые устраняют разрыв между традиционными системами и децентрализованными технологиями. Наши решения, улучшенные с помощью ИИ, делают блокчейн более доступным, масштабируемым и удобным для разработчиков и предприятий.">We're on a mission to accelerate Web3 adoption by providing enterprise-grade infrastructure and tools that bridge the gap between traditional systems and decentralized technologies. Our AI-enhanced solutions make blockchain more accessible, scalable, and user-friendly for developers and enterprises alike.</p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label" data-en="Team Members" data-ru="Членов команды">Team Members</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label" data-en="Blockchain Networks" data-ru="Блокчейн-сетей">Blockchain Networks</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$25M+</span>
+                            <span class="stat-label" data-en="Secured in Funding" data-ru="Привлеченных инвестиций">Secured in Funding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Our Solutions" data-ru="Наши решения">Our Solutions</h2>
+                <p class="section-subtitle" data-en="Cutting-edge infrastructure for the decentralized ecosystem" data-ru="Передовая инфраструктура для децентрализованной экосистемы">Cutting-edge infrastructure for the decentralized ecosystem</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 data-en="HashNode Infrastructure" data-ru="Инфраструктура HashNode">HashNode Infrastructure</h3>
+                    <p data-en="High-performance node infrastructure with 99.99% uptime and industry-leading security protocols. Support for all major blockchain networks with dedicated APIs and robust SDK integration." data-ru="Высокопроизводительная инфраструктура нод с 99,99% времени безотказной работы и передовыми протоколами безопасности. Поддержка всех основных блокчейн-сетей с выделенными API и надежной интеграцией SDK.">High-performance node infrastructure with 99.99% uptime and industry-leading security protocols. Support for all major blockchain networks with dedicated APIs and robust SDK integration.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-en="AI-Powered Analytics" data-ru="Аналитика с ИИ">AI-Powered Analytics</h3>
+                    <p data-en="Advanced blockchain analytics powered by our proprietary AI models. Real-time insights, anomaly detection, and predictive intelligence for optimizing your Web3 operations and security posture." data-ru="Продвинутая блокчейн-аналитика на основе наших проприетарных моделей ИИ. Аналитика в реальном времени, обнаружение аномалий и предиктивный интеллект для оптимизации ваших операций Web3 и обеспечения безопасности.">Advanced blockchain analytics powered by our proprietary AI models. Real-time insights, anomaly detection, and predictive intelligence for optimizing your Web3 operations and security posture.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 data-en="DApp Development Suite" data-ru="Набор для разработки DApp">DApp Development Suite</h3>
+                    <p data-en="Comprehensive toolkit for building scalable decentralized applications. Smart contract templates, testing environments, and deployment pipelines that reduce time-to-market by up to 60%." data-ru="Комплексный набор инструментов для создания масштабируемых децентрализованных приложений. Шаблоны смарт-контрактов, среды тестирования и конвейеры развертывания, сокращающие время выхода на рынок до 60%.">Comprehensive toolkit for building scalable decentralized applications. Smart contract templates, testing environments, and deployment pipelines that reduce time-to-market by up to 60%.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-en="Security Solutions" data-ru="Решения безопасности">Security Solutions</h3>
+                    <p data-en="Enterprise-grade security for your blockchain infrastructure. Smart contract auditing, real-time threat monitoring, and automated incident response to protect your assets and user data." data-ru="Безопасность корпоративного уровня для вашей блокчейн-инфраструктуры. Аудит смарт-контрактов, мониторинг угроз в реальном времени и автоматизированное реагирование на инциденты для защиты ваших активов и данных пользователей.">Enterprise-grade security for your blockchain infrastructure. Smart contract auditing, real-time threat monitoring, and automated incident response to protect your assets and user data.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Our Technology" data-ru="Наши технологии">Our Technology</h2>
+                <p class="section-subtitle" data-en="Powered by innovation and built for the future" data-ru="Работает на инновациях и создано для будущего">Powered by innovation and built for the future</p>
+            </div>
+            <div class="technology-showcase">
+                <div class="tech-visual">
+                    <div id="tech-visualization"></div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tabs">
+                        <button class="tech-tab active" data-tab="blockchain" data-en="Blockchain" data-ru="Блокчейн">Blockchain</button>
+                        <button class="tech-tab" data-tab="ai" data-en="AI Integration" data-ru="Интеграция ИИ">AI Integration</button>
+                        <button class="tech-tab" data-tab="security" data-en="Security" data-ru="Безопасность">Security</button>
+                        <button class="tech-tab" data-tab="scalability" data-en="Scalability" data-ru="Масштабируемость">Scalability</button>
+                    </div>
+                    <div class="tech-content">
+                        <div class="tech-panel active" id="blockchain-panel">
+                            <h3 data-en="Next-Gen Blockchain Infrastructure" data-ru="Блокчейн-инфраструктура нового поколения">Next-Gen Blockchain Infrastructure</h3>
+                            <p data-en="Our proprietary consensus algorithms deliver up to 15,000 transactions per second without compromising security or decentralization. HashFoundry supports all major blockchain protocols including Ethereum, Solana, Polkadot, and custom Layer 2 solutions." data-ru="Наши запатентованные алгоритмы консенсуса обеспечивают до 15 000 транзакций в секунду без ущерба для безопасности или децентрализации. HashFoundry поддерживает все основные блокчейн-протоколы, включая Ethereum, Solana, Polkadot и пользовательские решения Layer 2.">Our proprietary consensus algorithms deliver up to 15,000 transactions per second without compromising security or decentralization. HashFoundry supports all major blockchain protocols including Ethereum, Solana, Polkadot, and custom Layer 2 solutions.</p>
+                            <ul class="tech-features">
+                                <li data-en="Multi-chain support across 12+ networks" data-ru="Поддержка нескольких сетей (12+)">Multi-chain support across 12+ networks</li>
+                                <li data-en="Custom sidechain development" data-ru="Разработка пользовательских сайдчейнов">Custom sidechain development</li>
+                                <li data-en="Enterprise-grade validator infrastructure" data-ru="Инфраструктура валидаторов корпоративного уровня">Enterprise-grade validator infrastructure</li>
+                                <li data-en="Interoperability protocols for cross-chain transactions" data-ru="Протоколы совместимости для кросс-чейн транзакций">Interoperability protocols for cross-chain transactions</li>
+                            </ul>
+                        </div>
+                        <div class="tech-panel" id="ai-panel">
+                            <h3 data-en="AI-Enhanced Blockchain Solutions" data-ru="Блокчейн-решения с ИИ">AI-Enhanced Blockchain Solutions</h3>
+                            <p data-en="Our AI systems continuously analyze blockchain data to optimize performance, detect anomalies, and predict network behavior. Machine learning models improve transaction routing, smart contract execution, and resource allocation in real-time." data-ru="Наши системы ИИ непрерывно анализируют данные блокчейна для оптимизации производительности, обнаружения аномалий и прогнозирования поведения сети. Модели машинного обучения улучшают маршрутизацию транзакций, выполнение смарт-контрактов и распределение ресурсов в реальном времени.">Our AI systems continuously analyze blockchain data to optimize performance, detect anomalies, and predict network behavior. Machine learning models improve transaction routing, smart contract execution, and resource allocation in real-time.</p>
+                            <ul class="tech-features">
+                                <li data-en="Neural network-based anomaly detection" data-ru="Обнаружение аномалий на основе нейронных сетей">Neural network-based anomaly detection</li>
+                                <li data-en="Predictive analytics for network optimization" data-ru="Предиктивная аналитика для оптимизации сети">Predictive analytics for network optimization</li>
+                                <li data-en="Automated smart contract auditing" data-ru="Автоматизированный аудит смарт-контрактов">Automated smart contract auditing</li>
+                                <li data-en="AI-driven gas optimization" data-ru="Оптимизация газа на основе ИИ">AI-driven gas optimization</li>
+                            </ul>
+                        </div>
+                        <div class="tech-panel" id="security-panel">
+                            <h3 data-en="Military-Grade Security" data-ru="Безопасность военного уровня">Military-Grade Security</h3>
+                            <p data-en="Security is in our DNA. HashFoundry implements multi-layered security protocols including zero-knowledge proofs, homomorphic encryption, and quantum-resistant algorithms to protect your blockchain infrastructure against current and future threats." data-ru="Безопасность в нашей ДНК. HashFoundry реализует многоуровневые протоколы безопасности, включая доказательства с нулевым разглашением, гомоморфное шифрование и квантово-устойчивые алгоритмы для защиты вашей блокчейн-инфраструктуры от текущих и будущих угроз.">Security is in our DNA. HashFoundry implements multi-layered security protocols including zero-knowledge proofs, homomorphic encryption, and quantum-resistant algorithms to protect your blockchain infrastructure against current and future threats.</p>
+                            <ul class="tech-features">
+                                <li data-en="Real-time threat monitoring and prevention" data-ru="Мониторинг и предотвращение угроз в реальном времени">Real-time threat monitoring and prevention</li>
+                                <li data-en="Post-quantum cryptographic solutions" data-ru="Постквантовые криптографические решения">Post-quantum cryptographic solutions</li>
+                                <li data-en="Secure multi-party computation" data-ru="Безопасные многосторонние вычисления">Secure multi-party computation</li>
+                                <li data-en="Hardware security module integration" data-ru="Интеграция с аппаратными модулями безопасности">Hardware security module integration</li>
+                            </ul>
+                        </div>
+                        <div class="tech-panel" id="scalability-panel">
+                            <h3 data-en="Infinite Scalability Architecture" data-ru="Архитектура бесконечной масштабируемости">Infinite Scalability Architecture</h3>
+                            <p data-en="Our dynamic sharding technology and adaptive consensus mechanisms allow HashFoundry infrastructure to scale horizontally without performance degradation. Your applications grow seamlessly from prototype to global deployment with no downtime." data-ru="Наша технология динамического шардинга и адаптивные механизмы консенсуса позволяют инфраструктуре HashFoundry масштабироваться горизонтально без потери производительности. Ваши приложения беспрепятственно растут от прототипа до глобального развертывания без простоев.">Our dynamic sharding technology and adaptive consensus mechanisms allow HashFoundry infrastructure to scale horizontally without performance degradation. Your applications grow seamlessly from prototype to global deployment with no downtime.</p>
+                            <ul class="tech-features">
+                                <li data-en="Elastic computing resources" data-ru="Эластичные вычислительные ресурсы">Elastic computing resources</li>
+                                <li data-en="Dynamic state sharding" data-ru="Динамический шардинг состояния">Dynamic state sharding</li>
+                                <li data-en="Load-balanced validator networks" data-ru="Сбалансированные сети валидаторов">Load-balanced validator networks</li>
+                                <li data-en="Zero-downtime infrastructure upgrades" data-ru="Обновления инфраструктуры без простоев">Zero-downtime infrastructure upgrades</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ecosystem" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Our Ecosystem" data-ru="Наша экосистема">Our Ecosystem</h2>
+                <p class="section-subtitle" data-en="A growing network of partners and integrations" data-ru="Растущая сеть партнеров и интеграций">A growing network of partners and integrations</p>
+            </div>
+            <div class="ecosystem-content">
+                <div class="partners-grid">
+                    <div class="partner-logo"><img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/58c1fb92-0e74-4bff-6da7-b837ba263800/public" alt="Major blockchain enterprise partner logo with HashFoundry integration" width="180" height="144"></div>
+                    <div class="partner-logo"><img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/6a8d3a45-c8a0-45dd-41d2-9a0b96fc3d00/public" alt="Financial technology partner collaborating with HashFoundry" width="180" height="144"></div>
+                    <div class="partner-logo"><img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/8d18b57f-89bf-47af-557f-1d3a49a95000/public" alt="Web3 foundation partner working with HashFoundry" width="180" height="144"></div>
+                    <div class="partner-logo"><img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/a22ebd92-6094-4d49-6252-289c4b740d00/public" alt="Cryptocurrency exchange integrated with HashFoundry infrastructure" width="180" height="144"></div>
+                    <div class="partner-logo"><img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/ff3a7c9f-6411-4847-d974-3339b8656200/public" alt="DeFi protocol built on HashFoundry technology" width="180" height="144"></div>
+                    <div class="partner-logo"><img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/156841c0-51dc-4834-f927-5b14ad340d00/public" alt="Enterprise blockchain solution provider partnered with HashFoundry" width="180" height="144"></div>
+                </div>
+                
+                <div class="case-studies">
+                    <h3 data-en="Success Stories" data-ru="Истории успеха">Success Stories</h3>
+                    <div class="case-studies-grid">
+                        <div class="case-study-card">
+                            <img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/fe39422d-9f91-4294-6d71-91b500ea4d00/public" alt="Enterprise blockchain implementation for financial services company showing HashFoundry technology" width="340" height="191">
+                            <h4 data-en="Global Payment Network" data-ru="Глобальная платежная сеть">Global Payment Network</h4>
+                            <p data-en="Helped a leading financial institution reduce cross-border transaction settlement times from days to seconds while cutting costs by 62%." data-ru="Помогли ведущему финансовому учреждению сократить время расчетов по трансграничным транзакциям с дней до секунд при снижении затрат на 62%.">Helped a leading financial institution reduce cross-border transaction settlement times from days to seconds while cutting costs by 62%.</p>
+                            <a href="#" class="btn-link" data-en="Read Case Study" data-ru="Читать кейс">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="case-study-card">
+                            <img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/96d2b0da-bf40-4300-bcec-591cc590ad00/public" alt="Supply chain blockchain solution developed by HashFoundry showing real-time tracking interface" width="340" height="191">
+                            <h4 data-en="Supply Chain Transformation" data-ru="Трансформация цепочки поставок">Supply Chain Transformation</h4>
+                            <p data-en="Built an end-to-end transparent supply chain solution for a Fortune 500 retailer, increasing inventory accuracy by 99.8% and reducing fraud by 92%." data-ru="Создали полностью прозрачное решение для цепочки поставок для ритейлера из списка Fortune 500, повысив точность инвентаризации до 99,8% и сократив мошенничество на 92%.">Built an end-to-end transparent supply chain solution for a Fortune 500 retailer, increasing inventory accuracy by 99.8% and reducing fraud by 92%.</p>
+                            <a href="#" class="btn-link" data-en="Read Case Study" data-ru="Читать кейс">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="case-study-card">
+                            <img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/3a0e0a6c-695b-4a36-420d-77c68642b600/public" alt="DeFi platform built with HashFoundry technology showing user dashboard and analytics" width="340" height="191">
+                            <h4 data-en="DeFi Platform Scaling" data-ru="Масштабирование DeFi-платформы">DeFi Platform Scaling</h4>
+                            <p data-en="Enabled a popular DeFi protocol to scale to 2M+ daily users with 99.99% uptime, resulting in $4.2B in total value locked within 6 months of launch." data-ru="Позволили популярному протоколу DeFi масштабироваться до 2 млн+ ежедневных пользователей с доступностью 99,99%, что привело к блокировке общей стоимости в размере 4,2 млрд долларов в течение 6 месяцев после запуска.">Enabled a popular DeFi protocol to scale to 2M+ daily users with 99.99% uptime, resulting in $4.2B in total value locked within 6 months of launch.</p>
+                            <a href="#" class="btn-link" data-en="Read Case Study" data-ru="Читать кейс">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Connect With Us" data-ru="Свяжитесь с нами">Connect With Us</h2>
+                <p class="section-subtitle" data-en="Let's build the decentralized future together" data-ru="Давайте вместе построим децентрализованное будущее">Let's build the decentralized future together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <form action="https://api.getsite.ai/v1/forms/submit" method="POST" class="contact-form">
+                        <input type="hidden" name="form_name" value="hash_foundry_contact">
+                        <div class="form-group">
+                            <label for="name" data-en="Full Name" data-ru="Полное имя">Full Name</label>
+                            <input type="text" id="name" name="name" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address" data-ru="Адрес электронной почты">Email Address</label>
+                            <input type="email" id="email" name="email" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-en="Company" data-ru="Компания">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest" data-en="I'm interested in" data-ru="Меня интересует">I'm interested in</label>
+                            <select id="interest" name="interest" required="">
+                                <option value="" data-en="Select an option" data-ru="Выберите опцию">Select an option</option>
+                                <option value="node_infrastructure" data-en="Node Infrastructure" data-ru="Инфраструктура нод">Node Infrastructure</option>
+                                <option value="ai_analytics" data-en="AI Analytics" data-ru="ИИ-аналитика">AI Analytics</option>
+                                <option value="dapp_development" data-en="DApp Development" data-ru="Разработка DApp">DApp Development</option>
+                                <option value="security_solutions" data-en="Security Solutions" data-ru="Решения безопасности">Security Solutions</option>
+                                <option value="partnership" data-en="Partnership Opportunities" data-ru="Возможности партнерства">Partnership Opportunities</option>
+                                <option value="other" data-en="Other" data-ru="Другое">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-en="Message" data-ru="Сообщение">Message</label>
+                            <textarea id="message" name="message" rows="5" required=""></textarea>
+                        </div>
+                        <button type="submit" class="btn primary" data-en="Send Message" data-ru="Отправить сообщение">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 data-en="Global Offices" data-ru="Глобальные офисы">Global Offices</h3>
+                        <div class="office-locations">
+                            <div class="office">
+                                <h4 data-en="San Francisco" data-ru="Сан-Франциско">San Francisco</h4>
+                                <p>101 California Street, Suite 2500<br>San Francisco, CA 94111</p>
+                            </div>
+                            <div class="office">
+                                <h4 data-en="Singapore" data-ru="Сингапур">Singapore</h4>
+                                <p>1 Raffles Quay, #20-01<br>Singapore 048583</p>
+                            </div>
+                            <div class="office">
+                                <h4 data-en="London" data-ru="Лондон">London</h4>
+                                <p>Level 33, 25 Canada Square<br>Canary Wharf, London E14 5LQ</p>
+                            </div>
+                        </div>
+                        
+                        <h3 data-en="Contact Information" data-ru="Контактная информация">Contact Information</h3>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:info@hashfoundry.tech">info@hashfoundry.tech</a></p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+14155557890">+1 (415) 555-7890</a></p>
+                        </div>
+                        
+                        <h3 data-en="Follow Us" data-ru="Подписывайтесь">Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">Hash<span class="highlight">Foundry</span></span>
+                    </div>
+                    <p data-en="Building the critical infrastructure for the decentralized future." data-ru="Создаем критически важную инфраструктуру для децентрализованного будущего.">Building the critical infrastructure for the decentralized future.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4 data-en="Solutions" data-ru="Решения">Solutions</h4>
+                        <ul>
+                            <li><a href="#" data-en="Node Infrastructure" data-ru="Инфраструктура нод">Node Infrastructure</a></li>
+                            <li><a href="#" data-en="AI Analytics" data-ru="ИИ-аналитика">AI Analytics</a></li>
+                            <li><a href="#" data-en="DApp Development" data-ru="Разработка DApp">DApp Development</a></li>
+                            <li><a href="#" data-en="Security Solutions" data-ru="Решения безопасности">Security Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4 data-en="Company" data-ru="Компания">Company</h4>
+                        <ul>
+                            <li><a href="#" data-en="About Us" data-ru="О нас">About Us</a></li>
+                            <li><a href="#" data-en="Careers" data-ru="Карьера">Careers</a></li>
+                            <li><a href="#" data-en="Press" data-ru="Пресса">Press</a></li>
+                            <li><a href="#" data-en="Blog" data-ru="Блог">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4 data-en="Resources" data-ru="Ресурсы">Resources</h4>
+                        <ul>
+                            <li><a href="#" data-en="Documentation" data-ru="Документация">Documentation</a></li>
+                            <li><a href="#" data-en="API Reference" data-ru="API справочник">API Reference</a></li>
+                            <li><a href="#" data-en="Tutorials" data-ru="Руководства">Tutorials</a></li>
+                            <li><a href="#" data-en="Community" data-ru="Сообщество">Community</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4 data-en="Legal" data-ru="Юридическая информация">Legal</h4>
+                        <ul>
+                            <li><a href="#" data-en="Privacy Policy" data-ru="Политика конфиденциальности">Privacy Policy</a></li>
+                            <li><a href="#" data-en="Terms of Service" data-ru="Условия использования">Terms of Service</a></li>
+                            <li><a href="#" data-en="Cookie Policy" data-ru="Политика cookie">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright" data-en="© 2025 HashFoundry Technologies, Inc. All rights reserved." data-ru="© 2025 HashFoundry Technologies, Inc. Все права защищены.">© 2025 HashFoundry Technologies, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body></html>
