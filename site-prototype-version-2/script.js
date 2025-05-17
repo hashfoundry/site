@@ -76,6 +76,8 @@ langRuBtn.addEventListener('click', () => {
     localStorage.setItem('language', 'ru');
 });
 
+// Set language based on the data-* attributes
+
 function setLanguage(lang) {
     elementsWithLang.forEach(el => {
         if (el.hasAttribute(`data-${lang}`)) {
@@ -98,10 +100,13 @@ if (savedLanguage === 'ru') {
 
 // Blockchain Visualization
 function createBlockchainVisualization() {
+    const blockchainElement = document.getElementById('blockchain-visualization');
+    if (!blockchainElement) return;
+    
     const canvas = document.createElement('canvas');
-    canvas.width = document.getElementById('blockchain-visualization').offsetWidth;
-    canvas.height = document.getElementById('blockchain-visualization').offsetHeight;
-    document.getElementById('blockchain-visualization').appendChild(canvas);
+    canvas.width = blockchainElement.offsetWidth;
+    canvas.height = blockchainElement.offsetHeight;
+    blockchainElement.appendChild(canvas);
     
     const ctx = canvas.getContext('2d');
     const blocks = [];
@@ -114,7 +119,7 @@ function createBlockchainVisualization() {
             x: Math.random() * (canvas.width - 100) + 50,
             y: Math.random() * (canvas.height - 100) + 50,
             size: 40 + Math.random() * 20,
-            color: `hsl(${240 + i * 15}, 80%, 65%)`,
+            color: i % 3 === 0 ? '#00A9FF' : i % 3 === 1 ? '#9C5BFF' : '#00F5D4', // Using brand colors
             vx: (Math.random() - 0.5) * 0.5,
             vy: (Math.random() - 0.5) * 0.5
         });
@@ -152,6 +157,7 @@ function createBlockchainVisualization() {
             const gradient = ctx.createLinearGradient(
                 fromBlock.x, fromBlock.y, toBlock.x, toBlock.y
             );
+            // Apply brand color gradient for connections
             gradient.addColorStop(0, fromBlock.color);
             gradient.addColorStop(1, toBlock.color);
             
@@ -207,6 +213,7 @@ function createBlockchainVisualization() {
 // Technology Visualization
 function createTechVisualization() {
     const container = document.getElementById('tech-visualization');
+    if (!container) return;
     
     // Create elements for the visualization
     for (let i = 0; i < 50; i++) {
@@ -216,7 +223,9 @@ function createTechVisualization() {
         particle.style.width = '4px';
         particle.style.height = '4px';
         particle.style.borderRadius = '50%';
-        particle.style.backgroundColor = `hsl(${240 + Math.random() * 60}, 80%, 65%)`;
+        // Use brand colors for particles
+        const brandColors = ['#00A9FF', '#9C5BFF', '#00F5D4', '#39FF14'];
+        particle.style.backgroundColor = brandColors[Math.floor(Math.random() * brandColors.length)];
         particle.style.opacity = Math.random() * 0.7 + 0.3;
         
         // Random initial position
@@ -262,7 +271,9 @@ function createTechVisualization() {
         line.style.position = 'absolute';
         line.style.height = '1px';
         line.style.width = `${30 + Math.random() * 40}%`;
-        line.style.backgroundColor = `hsl(${240 + Math.random() * 60}, 60%, 50%, 0.3)`;
+        // Use brand colors for lines with transparency
+        const brandColors = ['rgba(0, 169, 255, 0.3)', 'rgba(156, 91, 255, 0.3)', 'rgba(0, 245, 212, 0.3)', 'rgba(57, 255, 20, 0.3)'];
+        line.style.backgroundColor = brandColors[Math.floor(Math.random() * brandColors.length)];
         
         // Random position and rotation
         line.style.left = `${Math.random() * 100}%`;
@@ -275,11 +286,24 @@ function createTechVisualization() {
 
 // Initialize visualizations when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    createBlockchainVisualization();
-    createTechVisualization();
+    try {
+        createBlockchainVisualization();
+    } catch (e) {
+        console.log('Error creating blockchain visualization:', e);
+    }
+    
+    try {
+        createTechVisualization();
+    } catch (e) {
+        console.log('Error creating tech visualization:', e);
+    }
     
     // Reveal animations on scroll
-    const revealElements = document.querySelectorAll('.solution-card, .case-study-card, .about-image, .about-content');
+    const revealElements = document.querySelectorAll(
+        '.solution-card, .case-study-card, .about-image, .about-content, ' +
+        '.service-card, .expertise-card, .technology-item, .resource-card, ' +
+        '.doc-category, .whitepaper-list li, .course-category'
+    );
     
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
