@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  hashfoundry-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hashfoundry-react-app
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    # environment:
+    #   - NODE_ENV=production

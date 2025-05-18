@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# HashFoundry React Application
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Docker Support
+
+This project includes Docker support for both production and development environments. See [DOCKER_README.md](./DOCKER_README.md) for detailed instructions on using Docker with this application.
+
+### Quick Docker Commands
+
+**Production:**
+```bash
+# Build and run with Docker Compose
+docker-compose up -d
+
+# Stop containers
+docker-compose down
+```
+
+**Development:**
+```bash
+# Build and run development environment
+docker-compose -f docker-compose.dev.yml up -d
+
+# Stop development containers
+docker-compose -f docker-compose.dev.yml down
+```
 
 ## Available Scripts
 
