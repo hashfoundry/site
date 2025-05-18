@@ -1,0 +1,17 @@
+/* HashFoundry CSS - Modular Version */
+
+/* Import variables and theme settings */
+@import url('variables.css');
+
+/* Import common styles */
+@import url('common.css');
+
+/* Import section-specific styles */
+@import url('header.css');
+@import url('solutions.css');
+@import url('services.css');
+@import url('expertise.css');
+@import url('about.css');
+@import url('resources.css');
+@import url('contact.css');
+@import url('footer.css');
