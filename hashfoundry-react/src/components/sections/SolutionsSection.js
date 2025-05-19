@@ -144,10 +144,6 @@ const SolutionsSection = () => {
               </SolutionIcon>
               <SolutionTitle>{solution.title}</SolutionTitle>
               <SolutionDescription theme={theme}>{solution.description}</SolutionDescription>
-              <ButtonLink href="#">
-                {translate('Learn More', 'Узнать больше')}
-                <FontAwesomeIcon icon={faArrowRight} />
-              </ButtonLink>
             </SolutionCard>
           ))}
         </SolutionsGrid>

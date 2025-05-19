@@ -235,12 +235,11 @@ const TechnologySection = () => {
       label: translate('AI Integration', 'Интеграция ИИ'),
       title: translate('AI-Enhanced Blockchain Solutions', 'Блокчейн-решения с ИИ'),
       description: translate(
-        'Our AI systems continuously analyze blockchain data to optimize performance, detect anomalies, and predict network behavior. Machine learning models improve transaction routing, smart contract execution, and resource allocation in real-time.',
-        'Наши системы ИИ непрерывно анализируют данные блокчейна для оптимизации производительности, обнаружения аномалий и прогнозирования поведения сети. Модели машинного обучения улучшают маршрутизацию транзакций, выполнение смарт-контрактов и распределение ресурсов в реальном времени.'
+        'Our AI systems continuously analyze blockchain data to optimize performance, detect anomalies, and predict network behavior.',
+        'Наши системы ИИ непрерывно анализируют данные блокчейна для оптимизации производительности, обнаружения аномалий и прогнозирования поведения сети.'
       ),
       features: [
-        translate('Neural network-based anomaly detection', 'Обнаружение аномалий на основе нейронных сетей'),
-        translate('Predictive analytics for network optimization', 'Предиктивная аналитика для оптимизации сети'),
+        translate('AI based anomaly detection', 'Обнаружение аномалий на основе ИИ'),
         translate('Automated smart contract auditing', 'Автоматизированный аудит смарт-контрактов'),
         translate('AI-driven gas optimization', 'Оптимизация газа на основе ИИ')
       ]

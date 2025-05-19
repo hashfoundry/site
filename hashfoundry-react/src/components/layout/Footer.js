@@ -112,39 +112,18 @@ const Footer = () => {
             <FooterLinkGroup theme={theme}>
               <h4>{translate('Solutions', 'Решения')}</h4>
               <ul>
-                <li><a href="#">{translate('Node Infrastructure', 'Инфраструктура нод')}</a></li>
-                <li><a href="#">{translate('AI Analytics', 'ИИ-аналитика')}</a></li>
-                <li><a href="#">{translate('DApp Development', 'Разработка DApp')}</a></li>
-                <li><a href="#">{translate('Security Solutions', 'Решения безопасности')}</a></li>
+                <li><a href="#solutions">{translate('Node Infrastructure', 'Инфраструктура нод')}</a></li>
+                <li><a href="#solutions">{translate('AI Analytics', 'ИИ-аналитика')}</a></li>
+                <li><a href="#solutions">{translate('DApp Development', 'Разработка DApp')}</a></li>
+                <li><a href="#solutions">{translate('Security Solutions', 'Решения безопасности')}</a></li>
               </ul>
             </FooterLinkGroup>
             
             <FooterLinkGroup theme={theme}>
               <h4>{translate('Company', 'Компания')}</h4>
               <ul>
-                <li><a href="#">{translate('About Us', 'О нас')}</a></li>
-                <li><a href="#">{translate('Careers', 'Карьера')}</a></li>
-                <li><a href="#">{translate('Press', 'Пресса')}</a></li>
-                <li><a href="#">{translate('Blog', 'Блог')}</a></li>
-              </ul>
-            </FooterLinkGroup>
-            
-            <FooterLinkGroup theme={theme}>
-              <h4>{translate('Resources', 'Ресурсы')}</h4>
-              <ul>
-                <li><a href="#">{translate('Documentation', 'Документация')}</a></li>
-                <li><a href="#">{translate('API Reference', 'API справочник')}</a></li>
-                <li><a href="#">{translate('Tutorials', 'Руководства')}</a></li>
-                <li><a href="#">{translate('Community', 'Сообщество')}</a></li>
-              </ul>
-            </FooterLinkGroup>
-            
-            <FooterLinkGroup theme={theme}>
-              <h4>{translate('Legal', 'Юридическая информация')}</h4>
-              <ul>
-                <li><a href="#">{translate('Privacy Policy', 'Политика конфиденциальности')}</a></li>
-                <li><a href="#">{translate('Terms of Service', 'Условия использования')}</a></li>
-                <li><a href="#">{translate('Cookie Policy', 'Политика cookie')}</a></li>
+                <li><a href="#about">{translate('About Us', 'О нас')}</a></li>
+                <li><a href="#contact">{translate('Contact', 'Контакты')}</a></li>
               </ul>
             </FooterLinkGroup>
           </FooterLinks>

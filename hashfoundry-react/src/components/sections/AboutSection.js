@@ -123,8 +123,8 @@ const AboutSection = () => {
             <h3>{translate('Our Vision', 'Наше видение')}</h3>
             <p>
               {translate(
-                'At HashFoundry, we\'re building the critical infrastructure for the decentralized future. Founded in 2023, our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world.',
-                'В HashFoundry мы создаем критически важную инфраструктуру для децентрализованного будущего. Основанная в 2023 году, наша команда ветеранов блокчейна, исследователей ИИ и инженеров распределенных систем создает фундамент для более открытого, безопасного и эффективного цифрового мира.'
+                'At HashFoundry, we\'re building the critical infrastructure for the decentralized future. Our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world.',
+                'В HashFoundry мы создаем критически важную инфраструктуру для децентрализованного будущего. Наша команда ветеранов блокчейна, исследователей ИИ и инженеров распределенных систем создает фундамент для более открытого, безопасного и эффективного цифрового мира.'
               )}
             </p>
             
@@ -135,27 +135,7 @@ const AboutSection = () => {
                 'Наша миссия — ускорить внедрение Web3, предоставляя инфраструктуру и инструменты корпоративного уровня, которые устраняют разрыв между традиционными системами и децентрализованными технологиями. Наши решения, улучшенные с помощью ИИ, делают блокчейн более доступным, масштабируемым и удобным для разработчиков и предприятий.'
               )}
             </p>
-            
-            <StatsContainer>
-              <StatItem>
-                <StatNumber>40+</StatNumber>
-                <StatLabel theme={theme}>
-                  {translate('Team Members', 'Членов команды')}
-                </StatLabel>
-              </StatItem>
-              <StatItem>
-                <StatNumber>12</StatNumber>
-                <StatLabel theme={theme}>
-                  {translate('Blockchain Networks', 'Блокчейн-сетей')}
-                </StatLabel>
-              </StatItem>
-              <StatItem>
-                <StatNumber>$25M+</StatNumber>
-                <StatLabel theme={theme}>
-                  {translate('Secured in Funding', 'Привлеченных инвестиций')}
-                </StatLabel>
-              </StatItem>
-            </StatsContainer>
+
           </AboutContent>
         </AboutGrid>
       </div>

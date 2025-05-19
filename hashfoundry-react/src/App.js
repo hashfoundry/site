@@ -9,7 +9,6 @@ import HeroSection from './components/sections/HeroSection';
 import AboutSection from './components/sections/AboutSection';
 import SolutionsSection from './components/sections/SolutionsSection';
 import TechnologySection from './components/sections/TechnologySection';
-import EcosystemSection from './components/sections/EcosystemSection';
 import ContactSection from './components/sections/ContactSection';
 
 const MainContent = styled.main`
@@ -27,7 +26,6 @@ function App() {
           <AboutSection />
           <SolutionsSection />
           <TechnologySection />
-          <EcosystemSection />
           <ContactSection />
         </MainContent>
         <Footer />
