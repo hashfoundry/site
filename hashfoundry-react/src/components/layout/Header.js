@@ -231,11 +231,6 @@ const Header = () => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#ecosystem" onClick={closeMenu} theme={theme}>
-                  {translate('Ecosystem', 'Экосистема')}
-                </NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="#contact" onClick={closeMenu} theme={theme}>
                   {translate('Contact', 'Контакты')}
                 </NavLink>
