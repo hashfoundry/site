@@ -208,9 +208,11 @@ const Header = () => {
       <div className="container">
         <HeaderContent>
           <Nav>
-            <Logo>
-              <LogoText theme={theme}>Hash<Highlight>Foundry</Highlight></LogoText>
-            </Logo>
+            <a href="/" style={{ textDecoration: 'none' }}>
+              <Logo>
+                <LogoText theme={theme}>Hash<Highlight>Foundry</Highlight></LogoText>
+              </Logo>
+            </a>
             
             <NavMenu isOpen={isMenuOpen} theme={theme}>
               <NavItem>
