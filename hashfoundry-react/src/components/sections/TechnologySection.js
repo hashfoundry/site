@@ -244,21 +244,21 @@ const TechnologySection = () => {
         translate('AI-driven gas optimization', 'Оптимизация газа на основе ИИ')
       ]
     },
-    {
-      id: 'security',
-      label: translate('Security', 'Безопасность'),
-      title: translate('Military-Grade Security', 'Безопасность военного уровня'),
-      description: translate(
-        'Security is in our DNA. HashFoundry implements multi-layered security protocols including zero-knowledge proofs, homomorphic encryption, and quantum-resistant algorithms to protect your blockchain infrastructure against current and future threats.',
-        'Безопасность в нашей ДНК. HashFoundry реализует многоуровневые протоколы безопасности, включая доказательства с нулевым разглашением, гомоморфное шифрование и квантово-устойчивые алгоритмы для защиты вашей блокчейн-инфраструктуры от текущих и будущих угроз.'
-      ),
-      features: [
-        translate('Real-time threat monitoring and prevention', 'Мониторинг и предотвращение угроз в реальном времени'),
-        translate('Post-quantum cryptographic solutions', 'Постквантовые криптографические решения'),
-        translate('Secure multi-party computation', 'Безопасные многосторонние вычисления'),
-        translate('Hardware security module integration', 'Интеграция с аппаратными модулями безопасности')
-      ]
-    },
+    // {
+    //   id: 'security',
+    //   label: translate('Security', 'Безопасность'),
+    //   title: translate('Military-Grade Security', 'Безопасность военного уровня'),
+    //   description: translate(
+    //     'Security is in our DNA. HashFoundry implements multi-layered security protocols including zero-knowledge proofs, homomorphic encryption, and quantum-resistant algorithms to protect your blockchain infrastructure against current and future threats.',
+    //     'Безопасность в нашей ДНК. HashFoundry реализует многоуровневые протоколы безопасности, включая доказательства с нулевым разглашением, гомоморфное шифрование и квантово-устойчивые алгоритмы для защиты вашей блокчейн-инфраструктуры от текущих и будущих угроз.'
+    //   ),
+    //   features: [
+    //     translate('Real-time threat monitoring and prevention', 'Мониторинг и предотвращение угроз в реальном времени'),
+    //     translate('Post-quantum cryptographic solutions', 'Постквантовые криптографические решения'),
+    //     translate('Secure multi-party computation', 'Безопасные многосторонние вычисления'),
+    //     translate('Hardware security module integration', 'Интеграция с аппаратными модулями безопасности')
+    //   ]
+    // },
     {
       id: 'scalability',
       label: translate('Scalability', 'Масштабируемость'),
