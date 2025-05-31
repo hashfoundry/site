@@ -35,7 +35,6 @@ This optimized prompt combines the best elements from multiple approaches to cre
 
 ### 2. Products & Solutions
 - **Overview Page:** Introduction to HashFoundry's product ecosystem
-
 - **Blockchain Infrastructure**
   - **RPC Node Services:** Enterprise-grade nodes with real-time uptime metrics
   - **Block Explorers:** Feature comparison and demos
@@ -96,6 +95,7 @@ This optimized prompt combines the best elements from multiple approaches to cre
 
 ### 4. Services
 - **Overview Page:** Introduction to service offerings
+
 - **Web3 Infrastructure Support & Development:** Comprehensive support, custom infrastructure, migration, integration, and security services for blockchain and Web3 platforms (see Section 3 for details)
 
 - **Web3 Development**
