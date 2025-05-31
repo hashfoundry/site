@@ -42,10 +42,6 @@ This optimized prompt combines the best elements from multiple approaches to cre
   - **W3Apps Development Platform:** Overview and capabilities
   - **ZK Infrastructure Solutions:** Visual examples and use cases
 
-web3 application insfrastructutre
-- ci cd 
-- service orchestarrtion 
-- scalability  
 
 - **DeFi Innovations**
   - **DEX for Dated Futures:** Interactive demo and features
@@ -59,6 +55,27 @@ web3 application insfrastructutre
   - Performance optimization and scaling solutions for high-traffic dApps and protocols
   - Disaster recovery planning and rapid failover systems
   - SLA-backed uptime guarantees and real-time status dashboards
+
+- **CI/CD for Web3 Applications**
+  - Automated build, test, and deployment pipelines for smart contracts, dApps, and infrastructure components
+  - Integration with leading CI/CD platforms (GitHub Actions, GitLab CI, Jenkins, etc.)
+  - Secure, auditable deployment workflows with multi-environment support (dev, staging, production)
+  - Automated contract verification and post-deployment monitoring
+  - Rollback and versioning strategies for decentralized deployments
+
+- **Service Orchestration**
+  - Containerized microservices architecture using Docker and Kubernetes for Web3 backends
+  - Automated service discovery, scaling, and self-healing for blockchain nodes and supporting services
+  - Declarative infrastructure management (IaC) for reproducible, auditable environments
+  - Integration of on-chain and off-chain services with robust orchestration logic
+  - Zero-downtime upgrades and blue/green deployment strategies
+
+- **Scalability Solutions**
+  - Horizontal and vertical scaling of blockchain infrastructure to handle variable workloads
+  - Load balancing for RPC endpoints, APIs, and dApp gateways
+  - Caching layers and CDN integration for high-throughput, low-latency user experiences
+  - Sharding, sidechains, and Layer 2 scaling solutions (ZK-Rollups, Optimistic Rollups, etc.)
+  - Auto-scaling policies and real-time resource monitoring dashboards
 
 - **Custom Infrastructure Development**
   - Bespoke blockchain network deployments (public, private, consortium)
@@ -79,6 +96,7 @@ web3 application insfrastructutre
 
 ### 4. Services
 - **Overview Page:** Introduction to service offerings
+- **Web3 Infrastructure Support & Development:** Comprehensive support, custom infrastructure, migration, integration, and security services for blockchain and Web3 platforms (see Section 3 for details)
 
 - **Web3 Development**
   - Custom dApp design & engineering
