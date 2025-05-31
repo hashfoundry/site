@@ -25,7 +25,7 @@ This optimized prompt combines the best elements from multiple approaches to cre
 ## Comprehensive Website Structure
 
 ### 1. Home Page
-- **Hero Section:** Bold tagline (e.g., "Engineering the Future of Decentralized Intelligence") with animated blockchain visualization showing HashFoundry's ecosystem
+- **Hero Section:** Focused value proposition (e.g., "Production-Ready Web3 Infrastructure for Enterprise Scale") with real-time network metrics visualization displaying HashFoundry's infrastructure performance and uptime
 - **Problem/Solution Overview:** Brief statement of Web3/AI challenges and how HashFoundry addresses them
 - **Core Offerings Preview:** Visual highlights of Products & Solutions and Services
 - **Key Differentiators:** "Web3 & AI Synergy," "Uncompromising Security," "Bespoke Infrastructure"
@@ -90,7 +90,8 @@ This optimized prompt combines the best elements from multiple approaches to cre
 
 - **Security & Compliance**
   - Infrastructure security audits and best practice implementation
-  - Compliance support for regulated industries (KYC/AML, GDPR, etc.)
+  - Onchain activity 
+  - Compliance support for regulated industries (SOC2, etc.)
   - Ongoing vulnerability management and threat intelligence
 
 ### 4. Services
