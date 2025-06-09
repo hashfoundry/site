@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashFoundry | Engineering the Future of Decentralized Intelligence</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+        </button>
+    </div>
+    
+    <div class="language-selector">
+        <button id="lang-en" class="lang-btn active">EN</button>
+        <button id="lang-ru" class="lang-btn">RU</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-text">Hash<span class="highlight">Foundry</span></span>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link" data-en="Home" data-ru="Главная">Home</a></li>
+                    <li><a href="#products" class="nav-link" data-en="Products & Solutions" data-ru="Продукты и решения">Products & Solutions</a></li>
+                    <li><a href="#services" class="nav-link" data-en="Services" data-ru="Услуги">Services</a></li>
+                    <li><a href="#expertise" class="nav-link" data-en="Expertise & Technology" data-ru="Экспертиза и технологии">Expertise & Technology</a></li>
+                    <li><a href="#about" class="nav-link" data-en="About Us" data-ru="О нас">About Us</a></li>
+                    <li><a href="#contact" class="nav-link" data-en="Contact" data-ru="Контакты">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="hero" id="home">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-en="Engineering the Future of Decentralized Intelligence" data-ru="Создаем будущее децентрализованного интеллекта">Engineering the Future of Decentralized Intelligence</h1>
+                    <p class="hero-subtitle" data-en="Your trusted partner for pioneering Web3 infrastructure, AI-driven automation, and secure decentralized solutions" data-ru="Ваш надежный партнер в области передовой инфраструктуры Web3, автоматизации на базе ИИ и безопасных децентрализованных решений">Your trusted partner for pioneering Web3 infrastructure, AI-driven automation, and secure decentralized solutions</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn primary" data-en="Explore Solutions" data-ru="Изучить решения">Explore Solutions</a>
+                        <a href="#contact" class="btn secondary" data-en="Contact Us" data-ru="Связаться с нами">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div id="blockchain-visualization"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="problem-solution" class="section">
+        <div class="container">
+            <div class="problem-solution-grid">
+                <div class="problem-box">
+                    <h3 data-en="The Challenges" data-ru="Проблемы">The Challenges</h3>
+                    <ul class="challenge-list">
+                        <li data-en="Web3 infrastructure complexity and scalability limitations" data-ru="Сложность инфраструктуры Web3 и ограничения масштабируемости">Web3 infrastructure complexity and scalability limitations</li>
+                        <li data-en="Security vulnerabilities in decentralized systems" data-ru="Уязвимости безопасности в децентрализованных системах">Security vulnerabilities in decentralized systems</li>
+                        <li data-en="Difficult integration between traditional systems and blockchain" data-ru="Сложная интеграция между традиционными системами и блокчейном">Difficult integration between traditional systems and blockchain</li>
+                        <li data-en="Poor user experience limiting mainstream adoption" data-ru="Плохой пользовательский опыт, ограничивающий массовое внедрение">Poor user experience limiting mainstream adoption</li>
+                    </ul>
+                </div>
+                <div class="solution-box">
+                    <h3 data-en="Our Approach" data-ru="Наш подход">Our Approach</h3>
+                    <ul class="solution-list">
+                        <li data-en="Enterprise-grade infrastructure with AI-enhanced optimization" data-ru="Инфраструктура корпоративного уровня с ИИ-оптимизацией">Enterprise-grade infrastructure with AI-enhanced optimization</li>
+                        <li data-en="Multi-layered security protocols with zero-knowledge proofs" data-ru="Многоуровневые протоколы безопасности с доказательствами с нулевым разглашением">Multi-layered security protocols with zero-knowledge proofs</li>
+                        <li data-en="Seamless integration tools and cross-chain compatibility" data-ru="Инструменты плавной интеграции и кросс-чейн совместимость">Seamless integration tools and cross-chain compatibility</li>
+                        <li data-en="Developer-focused tooling with intuitive interfaces" data-ru="Инструменты для разработчиков с интуитивно понятными интерфейсами">Developer-focused tooling with intuitive interfaces</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Products & Solutions" data-ru="Продукты и решения">Products & Solutions</h2>
+                <p class="section-subtitle" data-en="Cutting-edge infrastructure for the decentralized ecosystem" data-ru="Передовая инфраструктура для децентрализованной экосистемы">Cutting-edge infrastructure for the decentralized ecosystem</p>
+            </div>
+
+            <div class="products-overview">
+                <p class="overview-text" data-en="HashFoundry offers a comprehensive ecosystem of blockchain and AI products designed to solve real-world challenges for enterprises, developers, and Web3 projects." data-ru="HashFoundry предлагает комплексную экосистему блокчейн и ИИ продуктов, разработанных для решения реальных задач для предприятий, разработчиков и проектов Web3.">HashFoundry offers a comprehensive ecosystem of blockchain and AI products designed to solve real-world challenges for enterprises, developers, and Web3 projects.</p>
+            </div>
+
+            <h3 class="category-title" data-en="Blockchain Infrastructure" data-ru="Блокчейн-инфраструктура">Blockchain Infrastructure</h3>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 data-en="RPC Node Services" data-ru="Сервисы узлов RPC">RPC Node Services</h3>
+                    <p data-en="Enterprise-grade nodes with 99.99% uptime, dedicated APIs and SDK integration. Supporting all major blockchain networks with real-time metrics and monitoring." data-ru="Узлы корпоративного уровня с 99,99% времени безотказной работы, выделенными API и интеграцией SDK. Поддержка всех основных блокчейн-сетей с метриками и мониторингом в реальном времени.">Enterprise-grade nodes with 99.99% uptime, dedicated APIs and SDK integration. Supporting all major blockchain networks with real-time metrics and monitoring.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 data-en="Block Explorers" data-ru="Обозреватели блоков">Block Explorers</h3>
+                    <p data-en="Powerful, customizable block explorers that provide deep insights into blockchain data with advanced search capabilities, detailed transaction views, and API access." data-ru="Мощные, настраиваемые обозреватели блоков, которые предоставляют глубокий анализ данных блокчейна с расширенными возможностями поиска, подробными представлениями транзакций и доступом к API.">Powerful, customizable block explorers that provide deep insights into blockchain data with advanced search capabilities, detailed transaction views, and API access.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3 data-en="W3Apps Development Platform" data-ru="Платформа разработки W3Apps">W3Apps Development Platform</h3>
+                    <p data-en="Comprehensive toolkit for building, testing, and deploying decentralized applications with pre-built components, templates, and streamlined deployment pipelines." data-ru="Комплексный набор инструментов для создания, тестирования и развертывания децентрализованных приложений с готовыми компонентами, шаблонами и оптимизированными процессами развертывания.">Comprehensive toolkit for building, testing, and deploying decentralized applications with pre-built components, templates, and streamlined deployment pipelines.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 data-en="ZK Infrastructure Solutions" data-ru="Решения ZK-инфраструктуры">ZK Infrastructure Solutions</h3>
+                    <p data-en="Zero-knowledge infrastructure for privacy-preserving applications, enabling secure and confidential transactions while maintaining regulatory compliance." data-ru="Инфраструктура с нулевым разглашением для приложений, сохраняющих конфиденциальность, обеспечивающая безопасные и конфиденциальные транзакции при сохранении соответствия нормативным требованиям.">Zero-knowledge infrastructure for privacy-preserving applications, enabling secure and confidential transactions while maintaining regulatory compliance.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <h3 class="category-title" data-en="DeFi Innovations" data-ru="Инновации DeFi">DeFi Innovations</h3>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 data-en="DEX for Dated Futures" data-ru="DEX для датированных фьючерсов">DEX for Dated Futures</h3>
+                    <p data-en="Decentralized exchange specifically designed for dated futures contracts, offering advanced trading features with institutional-grade security and liquidity." data-ru="Децентрализованная биржа, специально разработанная для датированных фьючерсных контрактов, предлагающая расширенные торговые функции с безопасностью и ликвидностью институционального уровня.">Decentralized exchange specifically designed for dated futures contracts, offering advanced trading features with institutional-grade security and liquidity.</p>
+                    <a href="#" class="btn-link" data-en="View Demo" data-ru="Посмотреть демо">View Demo <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-en="Onchain Analytics Dashboard" data-ru="Панель аналитики онchain">Onchain Analytics Dashboard</h3>
+                    <p data-en="Real-time blockchain data analytics platform with customizable dashboards, alerting systems, and AI-powered insights for informed decision-making." data-ru="Платформа аналитики данных блокчейна в реальном времени с настраиваемыми панелями мониторинга, системами оповещения и аналитическими данными на основе ИИ для принятия обоснованных решений.">Real-time blockchain data analytics platform with customizable dashboards, alerting systems, and AI-powered insights for informed decision-making.</p>
+                    <a href="#" class="btn-link" data-en="Live Preview" data-ru="Живой предварительный просмотр">Live Preview <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 data-en="Oracle Data Sourcing" data-ru="Источники данных Oracle">Oracle Data Sourcing</h3>
+                    <p data-en="Reliable and secure oracle solutions for bringing off-chain data to blockchain applications with multiple verification layers and dispute resolution mechanisms." data-ru="Надежные и безопасные решения oracle для переноса данных off-chain в блокчейн-приложения с несколькими уровнями проверки и механизмами разрешения споров.">Reliable and secure oracle solutions for bringing off-chain data to blockchain applications with multiple verification layers and dispute resolution mechanisms.</p>
+                    <a href="#" class="btn-link" data-en="Learn More" data-ru="Узнать больше">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Services" data-ru="Услуги">Services</h2>
+                <p class="section-subtitle" data-en="Expert Web3 technology services tailored to your needs" data-ru="Экспертные технологические услуги Web3, адаптированные под ваши потребности">Expert Web3 technology services tailored to your needs</p>
+            </div>
+            
+            <div class="services-overview">
+                <p class="overview-text" data-en="Our team of blockchain veterans and AI specialists provides comprehensive services to help you navigate the complex world of decentralized technologies." data-ru="Наша команда ветеранов блокчейна и специалистов по ИИ предоставляет комплексные услуги, которые помогут вам ориентироваться в сложном мире децентрализованных технологий.">Our team of blockchain veterans and AI specialists provides comprehensive services to help you navigate the complex world of decentralized technologies.</p>
+            </div>
+
+            <h3 class="category-title" data-en="Web3 Development" data-ru="Разработка Web3">Web3 Development</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 data-en="Custom dApp Design & Engineering" data-ru="Индивидуальный дизайн и разработка dApp">Custom dApp Design & Engineering</h3>
+                    <p data-en="End-to-end development of bespoke decentralized applications optimized for your specific business requirements and user experience goals." data-ru="Комплексная разработка индивидуальных децентрализованных приложений, оптимизированных под ваши конкретные бизнес-требования и цели пользовательского опыта.">End-to-end development of bespoke decentralized applications optimized for your specific business requirements and user experience goals.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3 data-en="Blockchain Integration & Consulting" data-ru="Интеграция блокчейна и консалтинг">Blockchain Integration & Consulting</h3>
+                    <p data-en="Expert guidance on selecting the right blockchain platforms and integration strategies for your existing systems and business processes." data-ru="Экспертное руководство по выбору правильных блокчейн-платформ и стратегий интеграции для ваших существующих систем и бизнес-процессов.">Expert guidance on selecting the right blockchain platforms and integration strategies for your existing systems and business processes.</p>
+                </div>
+            </div>
+
+            <h3 class="category-title" data-en="Smart Contract Development" data-ru="Разработка смарт-контрактов">Smart Contract Development</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 data-en="Custom & Composable Smart Contracts" data-ru="Индивидуальные и компонуемые смарт-контракты">Custom & Composable Smart Contracts</h3>
+                    <p data-en="Development of secure, gas-optimized smart contracts using Solidity, Rust, or other blockchain-specific languages, designed for seamless integration with existing protocols." data-ru="Разработка безопасных, оптимизированных по газу смарт-контрактов с использованием Solidity, Rust или других языков, специфичных для блокчейна, разработанных для бесшовной интеграции с существующими протоколами.">Development of secure, gas-optimized smart contracts using Solidity, Rust, or other blockchain-specific languages, designed for seamless integration with existing protocols.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-en="Security-First Development" data-ru="Разработка с приоритетом безопасности">Security-First Development</h3>
+                    <p data-en="Smart contract development following rigorous security best practices, including formal verification, comprehensive testing, and adherence to established design patterns." data-ru="Разработка смарт-контрактов с соблюдением строгих стандартов безопасности, включая формальную верификацию, комплексное тестирование и соблюдение установленных шаблонов проектирования.">Smart contract development following rigorous security best practices, including formal verification, comprehensive testing, and adherence to established design patterns.</p>
+                </div>
+            </div>
+
+            <h3 class="category-title" data-en="AI-Driven Solutions" data-ru="Решения на базе ИИ">AI-Driven Solutions</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-en="Anti-bot Protection Systems" data-ru="Системы защиты от ботов">Anti-bot Protection Systems</h3>
+                    <p data-en="Advanced AI-powered systems to protect your DeFi platforms and Web3 applications from malicious bots, ensuring fair access and preventing manipulation." data-ru="Продвинутые системы на базе ИИ для защиты ваших платформ DeFi и приложений Web3 от вредоносных ботов, обеспечивающие справедливый доступ и предотвращающие манипуляции.">Advanced AI-powered systems to protect your DeFi platforms and Web3 applications from malicious bots, ensuring fair access and preventing manipulation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 data-en="Web3 Process Automation" data-ru="Автоматизация процессов Web3">Web3 Process Automation</h3>
+                    <p data-en="Custom AI solutions that automate blockchain operations, smart contract interactions, and multi-chain processes for improved efficiency and reduced operational costs." data-ru="Индивидуальные решения ИИ, которые автоматизируют операции блокчейна, взаимодействия смарт-контрактов и процессы на нескольких цепочках для повышения эффективности и снижения операционных расходов.">Custom AI solutions that automate blockchain operations, smart contract interactions, and multi-chain processes for improved efficiency and reduced operational costs.</p>
+                </div>
+            </div>
+
+            <h3 class="category-title" data-en="Security & Optimization" data-ru="Безопасность и оптимизация">Security & Optimization</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 data-en="Security Audits & Penetration Testing" data-ru="Аудиты безопасности и пентестинг">Security Audits & Penetration Testing</h3>
+                    <p data-en="Comprehensive security audits and penetration testing for smart contracts, DApps, and blockchain infrastructure, identifying vulnerabilities before they can be exploited." data-ru="Комплексные аудиты безопасности и тестирование на проникновение для смарт-контрактов, DApps и блокчейн-инфраструктуры, выявление уязвимостей до того, как они могут быть использованы.">Comprehensive security audits and penetration testing for smart contracts, DApps, and blockchain infrastructure, identifying vulnerabilities before they can be exploited.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 data-en="Performance Optimization" data-ru="Оптимизация производительности">Performance Optimization</h3>
+                    <p data-en="Gas optimization, computational efficiency improvements, and throughput enhancements for your blockchain applications and smart contracts." data-ru="Оптимизация газа, улучшение вычислительной эффективности и повышение пропускной способности для ваших блокчейн-приложений и смарт-контрактов.">Gas optimization, computational efficiency improvements, and throughput enhancements for your blockchain applications and smart contracts.</p>
+                </div>
+            </div>
+
+            <h3 class="category-title" data-en="ZK Implementation & Maintenance" data-ru="Внедрение и обслуживание ZK">ZK Implementation & Maintenance</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 data-en="Zero-Knowledge Solutions" data-ru="Решения с нулевым разглашением">Zero-Knowledge Solutions</h3>
+                    <p data-en="Implementation of ZK-Rollups, ZK-SNARKs/STARKs, and other zero-knowledge proof systems to enhance privacy, scalability, and security for your applications." data-ru="Внедрение ZK-Rollups, ZK-SNARKs/STARKs и других систем доказательств с нулевым разглашением для повышения конфиденциальности, масштабируемости и безопасности ваших приложений.">Implementation of ZK-Rollups, ZK-SNARKs/STARKs, and other zero-knowledge proof systems to enhance privacy, scalability, and security for your applications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 data-en="ZK Infrastructure Maintenance" data-ru="Обслуживание ZK-инфраструктуры">ZK Infrastructure Maintenance</h3>
+                    <p data-en="Ongoing support, optimization, and updates for your zero-knowledge infrastructure, ensuring continued performance and compatibility with evolving protocols." data-ru="Постоянная поддержка, оптимизация и обновления для вашей инфраструктуры с нулевым разглашением, обеспечивающие постоянную производительность и совместимость с развивающимися протоколами.">Ongoing support, optimization, and updates for your zero-knowledge infrastructure, ensuring continued performance and compatibility with evolving protocols.</p>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <a href="#contact" class="btn primary" data-en="Discuss Your Project" data-ru="Обсудить ваш проект">Discuss Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Expertise & Technology" data-ru="Экспертиза и технологии">Expertise & Technology</h2>
+                <p class="section-subtitle" data-en="Powered by innovation and built for the future" data-ru="Работает на инновациях и создано для будущего">Powered by innovation and built for the future</p>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-en="Web3 & AI Synergy" data-ru="Синергия Web3 и ИИ">Web3 & AI Synergy</h3>
+                    <p data-en="Our unique approach combines blockchain's decentralization with artificial intelligence's predictive capabilities to create systems that are more than the sum of their parts." data-ru="Наш уникальный подход сочетает децентрализацию блокчейна с прогностическими возможностями искусственного интеллекта для создания систем, которые больше, чем сумма их частей.">Our unique approach combines blockchain's decentralization with artificial intelligence's predictive capabilities to create systems that are more than the sum of their parts.</p>
+                    <ul class="tech-features">
+                        <li data-en="AI-enhanced blockchain scalability solutions" data-ru="Решения масштабируемости блокчейна с использованием ИИ">AI-enhanced blockchain scalability solutions</li>
+                        <li data-en="Predictive analytics for transaction optimization" data-ru="Предиктивная аналитика для оптимизации транзакций">Predictive analytics for transaction optimization</li>
+                        <li data-en="Neural networks for smart contract verification" data-ru="Нейронные сети для проверки смарт-контрактов">Neural networks for smart contract verification</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 data-en="Security in Decentralized Systems" data-ru="Безопасность в децентрализованных системах">Security in Decentralized Systems</h3>
+                    <p data-en="Security is our foundational principle. Our multi-layered approach encompasses cryptographic innovation, continuous monitoring, and proactive threat modeling to protect decentralized assets." data-ru="Безопасность — наш основополагающий принцип. Наш многоуровневый подход включает криптографические инновации, постоянный мониторинг и проактивное моделирование угроз для защиты децентрализованных активов.">Security is our foundational principle. Our multi-layered approach encompasses cryptographic innovation, continuous monitoring, and proactive threat modeling to protect decentralized assets.</p>
+                    <ul class="tech-features">
+                        <li data-en="Zero-knowledge security architectures" data-ru="Архитектуры безопасности с нулевым разглашением">Zero-knowledge security architectures</li>
+                        <li data-en="Quantum-resistant cryptographic implementations" data-ru="Квантово-устойчивые криптографические реализации">Quantum-resistant cryptographic implementations</li>
+                        <li data-en="Real-time threat detection and response systems" data-ru="Системы обнаружения угроз и реагирования в реальном времени">Real-time threat detection and response systems</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 data-en="Key Technologies We Master" data-ru="Ключевые технологии, которыми мы владеем">Key Technologies We Master</h3>
+                    <div class="tech-categories">
+                        <div class="tech-category">
+                            <h4 data-en="Blockchain Platforms" data-ru="Блокчейн-платформы">Blockchain Platforms</h4>
+                            <p>Ethereum, Solana, Polkadot, Cosmos, Avalanche, Arbitrum, Optimism, and proprietary L2 solutions</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4 data-en="Development Languages" data-ru="Языки разработки">Development Languages</h4>
+                            <p>Solidity, Rust, Go, TypeScript, Python, and our own domain-specific languages for blockchain applications</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4 data-en="AI & ML Frameworks" data-ru="Фреймворки ИИ и МО">AI & ML Frameworks</h4>
+                            <p>TensorFlow, PyTorch, scikit-learn, and custom neural network architectures for blockchain applications</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4 data-en="Security Tools" data-ru="Инструменты безопасности">Security Tools</h4>
+                            <p>Formal verification frameworks, automated security scanners, and proprietary cryptographic schemes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="#" class="btn primary" data-en="Partner With Our Experts" data-ru="Сотрудничайте с нашими экспертами">Partner With Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="About Us" data-ru="О нас">About Us</h2>
+                <p class="section-subtitle" data-en="Pioneering the future of decentralized technologies" data-ru="Создаем будущее децентрализованных технологий">Pioneering the future of decentralized technologies</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/59c1fd70-2a9d-4993-d3a2-0ed212ba1600/public" alt="HashFoundry team collaborating on cutting-edge blockchain solutions in a modern tech workspace" width="600" height="400">
+                </div>
+                <div class="about-content">
+                    <h3 data-en="Our Story and Mission" data-ru="Наша история и миссия">Our Story and Mission</h3>
+                    <p data-en="At HashFoundry, we're building the critical infrastructure for the decentralized future. Founded in 2023, our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world." data-ru="В HashFoundry мы создаем критически важную инфраструктуру для децентрализованного будущего. Основанная в 2023 году, наша команда ветеранов блокчейна, исследователей ИИ и инженеров распределенных систем создает фундамент для более открытого, безопасного и эффективного цифрового мира.">At HashFoundry, we're building the critical infrastructure for the decentralized future. Founded in 2023, our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world.</p>
+                    
+                    <h3 data-en="Our Vision" data-ru="Наше видение">Our Vision</h3>
+                    <p data-en="To be a leading force in building a decentralized future where technology is transparent, efficient, and accessible to all. We believe in the transformative power of combining blockchain and AI to solve real-world challenges." data-ru="Быть ведущей силой в построении децентрализованного будущего, где технологии прозрачны, эффективны и доступны для всех. Мы верим в преобразующую силу сочетания блокчейна и ИИ для решения реальных проблем.">To be a leading force in building a decentralized future where technology is transparent, efficient, and accessible to all. We believe in the transformative power of combining blockchain and AI to solve real-world challenges.</p>
+                    
+                    <h3 data-en="Company Values" data-ru="Ценности компании">Company Values</h3>
+                    <div class="values-container">
+                        <div class="value-item">
+                            <h4 data-en="Innovation" data-ru="Инновации">Innovation</h4>
+                            <p data-en="Pushing the boundaries of what's possible in Web3" data-ru="Раздвигаем границы возможного в Web3">Pushing the boundaries of what's possible in Web3</p>
+                        </div>
+                        <div class="value-item">
+                            <h4 data-en="Security" data-ru="Безопасность">Security</h4>
+                            <p data-en="Unwavering commitment to protecting digital assets" data-ru="Непоколебимая приверженность защите цифровых активов">Unwavering commitment to protecting digital assets</p>
+                        </div>
+                        <div class="value-item">
+                            <h4 data-en="Collaboration" data-ru="Сотрудничество">Collaboration</h4>
+                            <p data-en="Building stronger solutions through open partnership" data-ru="Создание более сильных решений через открытое партнерство">Building stronger solutions through open partnership</p>
+                        </div>
+                        <div class="value-item">
+                            <h4 data-en="Transparency" data-ru="Прозрачность">Transparency</h4>
+                            <p data-en="Fostering trust through open communication and code" data-ru="Укрепление доверия через открытое общение и код">Fostering trust through open communication and code</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label" data-en="Team Members" data-ru="Членов команды">Team Members</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label" data-en="Blockchain Networks" data-ru="Блокчейн-сетей">Blockchain Networks</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">$25M+</span>
+                            <span class="stat-label" data-en="Secured in Funding" data-ru="Привлеченных инвестиций">Secured in Funding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Connect With Us" data-ru="Свяжитесь с нами">Connect With Us</h2>
+                <p class="section-subtitle" data-en="Let's build the decentralized future together" data-ru="Давайте вместе построим децентрализованное будущее">Let's build the decentralized future together</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-en="Full Name" data-ru="Полное имя">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address" data-ru="Адрес электронной почты">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-en="Company" data-ru="Компания">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest" data-en="I'm interested in" data-ru="Меня интересует">I'm interested in</label>
+                            <select id="interest" name="interest" required>
+                                <option value="" data-en="Select an option" data-ru="Выберите опцию">Select an option</option>
+                                <option value="node_infrastructure" data-en="RPC Node Services" data-ru="Сервисы узлов RPC">RPC Node Services</option>
+                                <option value="block_explorers" data-en="Block Explorers" data-ru="Обозреватели блоков">Block Explorers</option>
+                                <option value="w3apps_platform" data-en="W3Apps Development Platform" data-ru="Платформа разработки W3Apps">W3Apps Development Platform</option>
+                                <option value="zk_solutions" data-en="ZK Infrastructure" data-ru="ZK-инфраструктура">ZK Infrastructure</option>
+                                <option value="defi_products" data-en="DeFi Products" data-ru="Продукты DeFi">DeFi Products</option>
+                                <option value="custom_development" data-en="Custom Development" data-ru="Индивидуальная разработка">Custom Development</option>
+                                <option value="security_services" data-en="Security Services" data-ru="Услуги безопасности">Security Services</option>
+                                <option value="partnership" data-en="Partnership Opportunities" data-ru="Возможности партнерства">Partnership Opportunities</option>
+                                <option value="other" data-en="Other" data-ru="Другое">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-en="Message" data-ru="Сообщение">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary" data-en="Send Message" data-ru="Отправить сообщение">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 data-en="Global Offices" data-ru="Глобальные офисы">Global Offices</h3>
+                        <div class="office-locations">
+                            <div class="office">
+                                <h4 data-en="San Francisco" data-ru="Сан-Франциско">San Francisco</h4>
+                                <p>101 California Street, Suite 2500<br>San Francisco, CA 94111</p>
+                            </div>
+                            <div class="office">
+                                <h4 data-en="Singapore" data-ru="Сингапур">Singapore</h4>
+                                <p>1 Raffles Quay, #20-01<br>Singapore 048583</p>
+                            </div>
+                            <div class="office">
+                                <h4 data-en="London" data-ru="Лондон">London</h4>
+                                <p>Level 33, 25 Canada Square<br>Canary Wharf, London E14 5LQ</p>
+                            </div>
+                        </div>
+                        
+                        <h3 data-en="Direct Contacts" data-ru="Прямые контакты">Direct Contacts</h3>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:info@hashfoundry.tech">info@hashfoundry.tech</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:sales@hashfoundry.tech">sales@hashfoundry.tech</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:support@hashfoundry.tech">support@hashfoundry.tech</a></p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+14155557890">+1 (415) 555-7890</a></p>
+                        </div>
+                        
+                        <h3 data-en="Social & Web3 Channels" data-ru="Социальные каналы и Web3">Social & Web3 Channels</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">Hash<span class="highlight">Foundry</span></span>
+                    </div>
+                    <p data-en="Building the critical infrastructure for the decentralized future." data-ru="Создаем критически важную инфраструктуру для децентрализованного будущего.">Building the critical infrastructure for the decentralized future.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4 data-en="Products" data-ru="Продукты">Products</h4>
+                        <ul>
+                            <li><a href="#" data-en="RPC Node Services" data-ru="Сервисы узлов RPC">RPC Node Services</a></li>
+                            <li><a href="#" data-en="Block Explorers" data-ru="Обозреватели блоков">Block Explorers</a></li>
+                            <li><a href="#" data-en="W3Apps Platform" data-ru="Платформа W3Apps">W3Apps Platform</a></li>
+                            <li><a href="#" data-en="ZK Infrastructure" data-ru="ZK-инфраструктура">ZK Infrastructure</a></li>
+                            <li><a href="#" data-en="DeFi Products" data-ru="Продукты DeFi">DeFi Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4 data-en="Services" data-ru="Услуги">Services</h4>
+                        <ul>
+                            <li><a href="#" data-en="Web3 Development" data-ru="Разработка Web3">Web3 Development</a></li>
+                            <li><a href="#" data-en="Smart Contract Development" data-ru="Разработка смарт-контрактов">Smart Contract Development</a></li>
+                            <li><a href="#" data-en="AI Solutions" data-ru="Решения ИИ">AI Solutions</a></li>
+                            <li><a href="#" data-en="Security Services" data-ru="Услуги безопасности">Security Services</a></li>
+                            <li><a href="#" data-en="ZK Implementation" data-ru="Внедрение ZK">ZK Implementation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4 data-en="Company" data-ru="Компания">Company</h4>
+                        <ul>
+                            <li><a href="#" data-en="About Us" data-ru="О нас">About Us</a></li>
+                            <li><a href="#" data-en="Careers" data-ru="Карьера">Careers</a></li>
+                            <li><a href="#" data-en="Press" data-ru="Пресса">Press</a></li>
+                            <li><a href="#" data-en="Contact" data-ru="Контакты">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <ul>
+                            <li><a href="#" data-en="Blog" data-ru="Блог">Blog</a></li>
+                            <li><a href="#" data-en="Documentation" data-ru="Документация">Documentation</a></li>
+                            <li><a href="#" data-en="Whitepapers" data-ru="Технические документы">Whitepapers</a></li>
+                            <li><a href="#" data-en="Educational Content" data-ru="Образовательный контент">Educational Content</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4 data-en="Legal" data-ru="Юридическая информация">Legal</h4>
+                        <ul>
+                            <li><a href="#" data-en="Privacy Policy" data-ru="Политика конфиденциальности">Privacy Policy</a></li>
+                            <li><a href="#" data-en="Terms of Service" data-ru="Условия использования">Terms of Service</a></li>
+                            <li><a href="#" data-en="Cookie Policy" data-ru="Политика cookie">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright" data-en="© 2025 HashFoundry Technologies, Inc. All rights reserved." data-ru="© 2025 HashFoundry Technologies, Inc. Все права защищены.">© 2025 HashFoundry Technologies, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

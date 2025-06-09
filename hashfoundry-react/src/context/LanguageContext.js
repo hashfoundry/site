@@ -1,0 +1,31 @@
+import { createContext } from 'react';
+
+export const LanguageContext = createContext({
+  language: 'en',
+  changeLanguage: () => {}
+});
+
+/*
+export const LanguageProvider = ({ children }) => {
+  const [language, setLanguage] = useState('en');
+
+  useEffect(() => {
+    // Check for saved language preference
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  const changeLanguage = (lang) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, changeLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+*/

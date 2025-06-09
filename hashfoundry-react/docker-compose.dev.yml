@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  hashfoundry-app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: hashfoundry-react-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true # For interactive sessions
+    tty: true        # Keeps the container running
+    restart: unless-stopped
