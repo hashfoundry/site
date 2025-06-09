@@ -47,6 +47,10 @@ const TechVisual = styled.div`
   overflow: hidden;
   background: var(--dark-bg-secondary);
   border-radius: 8px;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const TechDetails = styled.div``;
