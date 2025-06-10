@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
@@ -94,137 +94,80 @@ const HeroVisual = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  padding: 1rem;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
 `;
 
-const BlockchainVisualization = styled.div`
-  width: 100%;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
+const DesktopPlaceholder = styled.div`
+  position: absolute;
+  padding: 0.4rem 0.8rem;
+  background: rgba(0, 255, 255, 0.1);
+  color: #0ff;
+  border: 1px solid #0ff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+
+  display: none;
+  @media (min-width: 993px) {
+    display: block;
+  }
+`;
+
+const MobilePlaceholder = styled.div`
+  padding: 0.4rem 0.8rem;
+  background: rgba(0, 255, 255, 0.1);
+  color: #0ff;
+  border: 1px solid #0ff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+
+  display: none;
+  @media (max-width: 992px) {
+    display: block;
+  }
+`;
+
+const MobilePlaceholders = styled.div`
+  display: none;
+
+  @media (max-width: 992px) {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
 `;
 
 const HeroSection = () => {
   const { theme } = useContext(ThemeContext);
   const translate = useTranslation();
-  const canvasRef = useRef(null);
-  const visualizationRef = useRef(null);
 
-  useEffect(() => {
-    if (visualizationRef.current) {
-      createBlockchainVisualization();
-    }
-  }, []);
+  const placeholderTexts = [
+    translate('Fast', 'Быстро'),
+    translate('Secure', 'Надёжно'),
+    translate('Decentralized', 'Децентрализовано'),
+    translate('Scalable', 'Масштабируемо'),
+  ];
 
-  const createBlockchainVisualization = () => {
-    const canvas = document.createElement('canvas');
-    if (!visualizationRef.current) return;
-    
-    canvas.width = visualizationRef.current.offsetWidth;
-    canvas.height = visualizationRef.current.offsetHeight;
-    visualizationRef.current.appendChild(canvas);
-    
-    const ctx = canvas.getContext('2d');
-    const blocks = [];
-    const connections = [];
-    const numBlocks = 8;
-    
-    // Create blocks
-    for (let i = 0; i < numBlocks; i++) {
-      blocks.push({
-        x: Math.random() * (canvas.width - 100) + 50,
-        y: Math.random() * (canvas.height - 100) + 50,
-        size: 40 + Math.random() * 20,
-        color: `hsl(${240 + i * 15}, 80%, 65%)`,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5
-      });
-    }
-    
-    // Create connections between blocks
-    for (let i = 0; i < numBlocks - 1; i++) {
-      connections.push({
-        from: i,
-        to: i + 1
-      });
-      
-      // Add some random connections
-      if (Math.random() > 0.5 && i > 1) {
-        connections.push({
-          from: i,
-          to: Math.floor(Math.random() * i)
-        });
-      }
-    }
-    
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw connections
-      ctx.lineWidth = 2;
-      connections.forEach(conn => {
-        const fromBlock = blocks[conn.from];
-        const toBlock = blocks[conn.to];
-        
-        ctx.beginPath();
-        ctx.moveTo(fromBlock.x, fromBlock.y);
-        ctx.lineTo(toBlock.x, toBlock.y);
-        
-        const gradient = ctx.createLinearGradient(
-          fromBlock.x, fromBlock.y, toBlock.x, toBlock.y
-        );
-        gradient.addColorStop(0, fromBlock.color);
-        gradient.addColorStop(1, toBlock.color);
-        
-        ctx.strokeStyle = gradient;
-        ctx.stroke();
-        
-        // Draw data packet animation
-        const now = Date.now() / 1000;
-        const speed = 0.2; // Speed of packet
-        const t = (now * speed) % 1;
-        
-        const packetX = fromBlock.x + (toBlock.x - fromBlock.x) * t;
-        const packetY = fromBlock.y + (toBlock.y - fromBlock.y) * t;
-        
-        ctx.beginPath();
-        ctx.arc(packetX, packetY, 5, 0, Math.PI * 2);
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fill();
-      });
-      
-      // Draw blocks
-      blocks.forEach((block, index) => {
-        // Update position
-        block.x += block.vx;
-        block.y += block.vy;
-        
-        // Bounce off edges
-        if (block.x < block.size/2 || block.x > canvas.width - block.size/2) {
-          block.vx *= -1;
-        }
-        if (block.y < block.size/2 || block.y > canvas.height - block.size/2) {
-          block.vy *= -1;
-        }
-        
-        // Draw block
-        ctx.beginPath();
-        ctx.rect(block.x - block.size/2, block.y - block.size/2, block.size, block.size);
-        ctx.fillStyle = block.color;
-        ctx.fill();
-        
-        // Add hash-like text
-        ctx.fillStyle = '#FFFFFF';
-        ctx.font = '10px monospace';
-        ctx.fillText(`#${index}`, block.x - 10, block.y + 4);
-      });
-      
-      requestAnimationFrame(animate);
-    }
-    
-    animate();
-  };
-
+  const positions = [
+    { top: '40%', left: '50%' },
+    { top: '40%', right: '20%' },
+    { bottom: '20%', left: '50%' },
+    { bottom: '20%', right: '20%' },
+  ];
+  
   return (
     <HeroSectionWrapper>
       <HeroContainer>
@@ -243,9 +186,19 @@ const HeroSection = () => {
               {translate('Connect With Us', 'Связаться с нами')}
             </Button>
           </HeroButtons>
+          <MobilePlaceholders>
+            {placeholderTexts.map((text, idx) => (
+              <MobilePlaceholder key={idx}>{text}</MobilePlaceholder>
+            ))}
+          </MobilePlaceholders>
         </HeroContent>
         <HeroVisual>
-          <BlockchainVisualization ref={visualizationRef} />
+          <img src="https://fast.image.delivery/vuhdjrx.png" alt="Hero illustration" />
+          {placeholderTexts.map((text, idx) => (
+            <DesktopPlaceholder key={idx} style={positions[idx]}>
+              {text}
+            </DesktopPlaceholder>
+          ))}
         </HeroVisual>
       </HeroContainer>
     </HeroSectionWrapper>
