@@ -48,7 +48,7 @@ const TechVisual = styled.div`
   background: var(--dark-bg-secondary);
   border-radius: 8px;
   
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     display: none;
   }
 `;

@@ -4,13 +4,13 @@ import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
 
 const HeroSectionWrapper = styled.section`
-  padding: 5rem 0;
+  padding: 2rem 0;
 `;
 
 const HeroContainer = styled.div`
   display: flex;
   align-items: center;
-  min-height: 85vh;
+  min-height: 60vh;
   padding: 2rem 0;
   max-width: 1200px;
   margin: 0 auto;
@@ -27,7 +27,7 @@ const HeroContent = styled.div`
   
   @media (max-width: 992px) {
     padding-right: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
   }
 `;
@@ -127,7 +127,7 @@ const MetricsContainer = styled.div`
   
   @media (max-width: 992px) {
     grid-template-columns: 1.5fr 1fr;
-    margin-top: 1rem;
+    margin-top: 0;
   }
 `;
 
