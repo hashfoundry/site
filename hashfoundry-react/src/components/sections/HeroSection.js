@@ -89,6 +89,7 @@ const Button = styled.a`
   }
 `;
 
+/*
 const HeroVisual = styled.div`
   flex: 1;
   display: flex;
@@ -107,98 +108,86 @@ const HeroVisual = styled.div`
     }
   }
 `;
+*/
 
-const DesktopPlaceholder = styled.div`
-  position: absolute;
-  padding: 0.4rem 0.8rem;
-  background: rgba(0, 255, 255, 0.1);
-  color: #0ff;
-  border: 1px solid #0ff;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-
-  display: none;
-  @media (min-width: 993px) {
-    display: block;
-  }
+const HeroVisual = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 `;
 
-const MobilePlaceholder = styled.div`
-  padding: 0.4rem 0.8rem;
-  background: rgba(0, 255, 255, 0.1);
-  color: #0ff;
-  border: 1px solid #0ff;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-
-  display: none;
+const MetricsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  margin-bottom: 2rem;
+  
   @media (max-width: 992px) {
-    display: block;
-  }
-`;
-
-const MobilePlaceholders = styled.div`
-  display: none;
-
-  @media (max-width: 992px) {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
+    grid-template-columns: 1.5fr 1fr;
     margin-top: 1rem;
   }
+`;
+
+const MetricItem = styled.div`
+  text-align: center;
+`;
+
+const MetricValue = styled.div`
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+`;
+
+const MetricLabel = styled.div`
+  font-size: 0.9rem;
+  color: #a0a0b0;
 `;
 
 const HeroSection = () => {
   const { theme } = useContext(ThemeContext);
   const translate = useTranslation();
-
-  const placeholderTexts = [
-    translate('Fast', 'Быстро'),
-    translate('Secure', 'Надёжно'),
-    translate('Decentralized', 'Децентрализовано'),
-    translate('Scalable', 'Масштабируемо'),
-  ];
-
-  const positions = [
-    { top: '40%', left: '50%' },
-    { top: '40%', right: '20%' },
-    { bottom: '20%', left: '50%' },
-    { bottom: '20%', right: '20%' },
-  ];
   
   return (
     <HeroSectionWrapper>
       <HeroContainer>
         <HeroContent>
           <HeroTitle>
-            {translate('Building the Future of Web3 Infrastructure', 'Создаем будущее инфраструктуры Web3')}
+            {translate('Production-Ready Web3 Infrastructure for Enterprise Scale', 'Production-Ready Web3 инфраструктура корпоративного уровня')}
           </HeroTitle>
-          <HeroSubtitle theme={theme}>
-            {translate('Pioneering the intersection of blockchain, AI, and decentralized applications.', 'Передовые технологии на стыке блокчейна, ИИ и децентрализованных приложений.')}
+          <HeroSubtitle>
+            {translate('Building the critical foundation for decentralized applications with uncompromising security', 'Создаем критически важный фундамент для децентрализованных приложений с бескомпромиссной безопасностью')}
           </HeroSubtitle>
           <HeroButtons>
             <Button href="#solutions" className="primary">
-              {translate('Explore Solutions', 'Изучить решения')}
+              {translate('Explore solutions', 'Изучить решения')}
             </Button>
-            <Button href="#contact" className="secondary" theme={theme}>
-              {translate('Connect With Us', 'Связаться с нами')}
+            <Button href="#contact" className="secondary">
+              {translate('Contact Us', 'Связаться с нами')}
             </Button>
           </HeroButtons>
-          <MobilePlaceholders>
-            {placeholderTexts.map((text, idx) => (
-              <MobilePlaceholder key={idx}>{text}</MobilePlaceholder>
-            ))}
-          </MobilePlaceholders>
         </HeroContent>
         <HeroVisual>
-          <img src="https://fast.image.delivery/vuhdjrx.png" alt="Hero illustration" />
-          {placeholderTexts.map((text, idx) => (
-            <DesktopPlaceholder key={idx} style={positions[idx]}>
-              {text}
-            </DesktopPlaceholder>
-          ))}
+          <MetricsContainer>
+            <MetricItem>
+              <MetricValue>99.99%</MetricValue>
+              <MetricLabel>{translate('Uptime', 'Время работы')}</MetricLabel>
+            </MetricItem>
+            <MetricItem>
+              <MetricValue>256</MetricValue>
+              <MetricLabel>{translate('Actoa Media', 'Actoa Media')}</MetricLabel>
+            </MetricItem>
+            <MetricItem>
+              <MetricValue>15,000 TPS</MetricValue>
+              <MetricLabel>{translate('World/atsag Mone Groist', 'World/atsag Mone Groist')}</MetricLabel>
+            </MetricItem>
+            <MetricItem>
+              <MetricValue>25 ms</MetricValue>
+              <MetricLabel>{translate('Latency', 'Задержка')}</MetricLabel>
+            </MetricItem>
+          </MetricsContainer>
         </HeroVisual>
       </HeroContainer>
     </HeroSectionWrapper>
