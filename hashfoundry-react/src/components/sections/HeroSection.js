@@ -164,10 +164,10 @@ const HeroSection = () => {
               {translate('Building the critical foundation for decentralized applications with uncompromising security', 'Создаем критически важный фундамент для децентрализованных приложений с бескомпромиссной безопасностью')}
             </HeroSubtitle>
             <HeroButtons>
-              <Button href="#solutions" className="primary">
+              <Button href="#solutions" className="primary" theme={theme}>
                 {translate('Explore solutions', 'Изучить решения')}
               </Button>
-              <Button href="#contact" className="secondary">
+              <Button href="#contact" className="secondary" theme={theme}>
                 {translate('Contact Us', 'Связаться с нами')}
               </Button>
             </HeroButtons>

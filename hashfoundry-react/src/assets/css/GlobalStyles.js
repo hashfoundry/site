@@ -34,18 +34,18 @@ const GlobalStyles = createGlobalStyle`
     --dark-text: #F0F2F5;
     --dark-text-secondary: #B4B9C6;
     --dark-border: #2D3748;
-    --dark-card-bg: #1A1F2E;
+    --dark-card-bg: #0E0E0E;
     --dark-hover: #2D3748;
     
     /* Dark theme section backgrounds */
-    --dark-header-bg: #0B1733;
-    --dark-hero-bg: #11204B;
-    --dark-about-bg: #1A2A60;
-    --dark-solutions-bg: #253478;
-    --dark-technology-bg: #2F3FA0;
-    --dark-contact-bg: #3A4BD0;
-    --dark-footer-bg: #081027;
-    --dark-divider: #0B1733;
+    --dark-header-bg: #000000;
+    --dark-hero-bg: #0E1B34;
+    --dark-about-bg: #0C182F;
+    --dark-solutions-bg: #0A1530;
+    --dark-technology-bg: #08122A;
+    --dark-contact-bg: #061024;
+    --dark-footer-bg: #0E0E0E;
+    --dark-divider: #000000;
     
     /* Common */
     --success: #48BB78;

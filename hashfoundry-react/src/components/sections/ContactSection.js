@@ -217,45 +217,42 @@ const ContactSection = () => {
   };
 
   return (
-    <>
-      <SectionContainer id="contact" theme={theme}>
-        <div className="container">
-          <SectionHeader>
-            <SectionTitle>
-              {translate('Connect With Us', 'Свяжитесь с нами')}
-            </SectionTitle>
-            <SectionSubtitle theme={theme}>
-              {translate('Let\'s build the decentralized future together', 'Давайте вместе построим децентрализованное будущее')}
-            </SectionSubtitle>
-          </SectionHeader>
+    <SectionContainer id="contact" theme={theme}>
+      <div className="container">
+        <SectionHeader>
+          <SectionTitle>
+            {translate('Connect With Us', 'Свяжитесь с нами')}
+          </SectionTitle>
+          <SectionSubtitle theme={theme}>
+            {translate('Let\'s build the decentralized future together', 'Давайте вместе построим децентрализованное будущее')}
+          </SectionSubtitle>
+        </SectionHeader>
 
-          <ContactGrid>
-            <ContactInfo>
-              <ContactCard theme={theme}>
-                <h3>{translate('Contact Information', 'Контактная информация')}</h3>
-                <ContactDetails theme={theme}>
-                  <p>
-                    <FontAwesomeIcon icon={faEnvelope} />
-                    <a href="mailto:info@hashfoundry.tech">info@hashfoundry.tech</a>
-                  </p>
-                </ContactDetails>
+        <ContactGrid>
+          <ContactInfo>
+            <ContactCard theme={theme}>
+              <h3>{translate('Contact Information', 'Контактная информация')}</h3>
+              <ContactDetails theme={theme}>
+                <p>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <a href="mailto:info@hashfoundry.tech">info@hashfoundry.tech</a>
+                </p>
+              </ContactDetails>
 
-                <h3>{translate('Follow Us', 'Подписывайтесь')}</h3>
-                <SocialLinks>
-                  <SocialLink href="https://x.com/hashfnd" theme={theme}>
-                    <FontAwesomeIcon icon={faTwitter} />
-                  </SocialLink>
-                  <SocialLink href="https://github.com/hashfoundry" theme={theme}>
-                    <FontAwesomeIcon icon={faGithub} />
-                  </SocialLink>
-                </SocialLinks>
-              </ContactCard>
-            </ContactInfo>
-          </ContactGrid>
-        </div>
-      </SectionContainer>
-      <SectionDivider />
-    </>
+              <h3>{translate('Follow Us', 'Подписывайтесь')}</h3>
+              <SocialLinks>
+                <SocialLink href="https://x.com/hashfnd" theme={theme}>
+                  <FontAwesomeIcon icon={faTwitter} />
+                </SocialLink>
+                <SocialLink href="https://github.com/hashfoundry" theme={theme}>
+                  <FontAwesomeIcon icon={faGithub} />
+                </SocialLink>
+              </SocialLinks>
+            </ContactCard>
+          </ContactInfo>
+        </ContactGrid>
+      </div>
+    </SectionContainer>
   );
 };
 
