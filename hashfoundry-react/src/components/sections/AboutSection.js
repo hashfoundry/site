@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
+import SectionDivider from '../ui/SectionDivider';
 
 const SectionContainer = styled.section`
   padding: 5rem 0;
+  background-color: ${props => props.theme === 'light' ? 'var(--light-about-bg)' : 'var(--dark-about-bg)'};
 `;
 
 const SectionHeader = styled.div`
@@ -102,48 +104,51 @@ const AboutSection = () => {
   const translate = useTranslation();
 
   return (
-    <SectionContainer id="about">
-      <div className="container">
-        <SectionHeader>
-          <SectionTitle>
-            {translate('About HashFoundry', 'О HashFoundry')}
-          </SectionTitle>
-          <SectionSubtitle theme={theme}>
-            {translate('Pioneering the future of decentralized technologies', 'Создаем будущее децентрализованных технологий')}
-          </SectionSubtitle>
-        </SectionHeader>
-        
-        <AboutGrid>
-          <AboutImage>
-            <img 
-              src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/59c1fd70-2a9d-4993-d3a2-0ed212ba1600/public" 
-              alt="HashFoundry team collaborating on cutting-edge blockchain solutions in a modern tech workspace" 
-              width="600" 
-              height="400"
-            />
-          </AboutImage>
+    <>
+      <SectionContainer id="about" theme={theme}>
+        <div className="container">
+          <SectionHeader>
+            <SectionTitle>
+              {translate('About HashFoundry', 'О HashFoundry')}
+            </SectionTitle>
+            <SectionSubtitle theme={theme}>
+              {translate('Pioneering the future of decentralized technologies', 'Создаем будущее децентрализованных технологий')}
+            </SectionSubtitle>
+          </SectionHeader>
           
-          <AboutContent theme={theme}>
-            <h3>{translate('Our Vision', 'Наше видение')}</h3>
-            <p>
-              {translate(
-                'At HashFoundry, we\'re building the critical infrastructure for the decentralized future. Our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world.',
-                'В HashFoundry мы создаем критически важную инфраструктуру для децентрализованного будущего. Наша команда ветеранов блокчейна, исследователей ИИ и инженеров распределенных систем создает фундамент для более открытого, безопасного и эффективного цифрового мира.'
-              )}
-            </p>
+          <AboutGrid>
+            <AboutImage>
+              <img 
+                src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/59c1fd70-2a9d-4993-d3a2-0ed212ba1600/public" 
+                alt="HashFoundry team collaborating on cutting-edge blockchain solutions in a modern tech workspace" 
+                width="600" 
+                height="400"
+              />
+            </AboutImage>
             
-            <h3>{translate('Our Mission', 'Наша миссия')}</h3>
-            <p>
-              {translate(
-                'We\'re on a mission to accelerate Web3 adoption by providing enterprise-grade infrastructure and tools that bridge the gap between traditional systems and decentralized technologies. Our AI-enhanced solutions make blockchain more accessible, scalable, and user-friendly for developers and enterprises alike.',
-                'Наша миссия — ускорить внедрение Web3, предоставляя инфраструктуру и инструменты корпоративного уровня, которые устраняют разрыв между традиционными системами и децентрализованными технологиями. Наши решения, улучшенные с помощью ИИ, делают блокчейн более доступным, масштабируемым и удобным для разработчиков и предприятий.'
-              )}
-            </p>
+            <AboutContent theme={theme}>
+              <h3>{translate('Our Vision', 'Наше видение')}</h3>
+              <p>
+                {translate(
+                  'At HashFoundry, we\'re building the critical infrastructure for the decentralized future. Our team of blockchain veterans, AI researchers, and distributed systems engineers is creating the foundation for a more open, secure, and efficient digital world.',
+                  'В HashFoundry мы создаем критически важную инфраструктуру для децентрализованного будущего. Наша команда ветеранов блокчейна, исследователей ИИ и инженеров распределенных систем создает фундамент для более открытого, безопасного и эффективного цифрового мира.'
+                )}
+              </p>
+              
+              <h3>{translate('Our Mission', 'Наша миссия')}</h3>
+              <p>
+                {translate(
+                  'We\'re on a mission to accelerate Web3 adoption by providing enterprise-grade infrastructure and tools that bridge the gap between traditional systems and decentralized technologies. Our AI-enhanced solutions make blockchain more accessible, scalable, and user-friendly for developers and enterprises alike.',
+                  'Наша миссия — ускорить внедрение Web3, предоставляя инфраструктуру и инструменты корпоративного уровня, которые устраняют разрыв между традиционными системами и децентрализованными технологиями. Наши решения, улучшенные с помощью ИИ, делают блокчейн более доступным, масштабируемым и удобным для разработчиков и предприятий.'
+                )}
+              </p>
 
-          </AboutContent>
-        </AboutGrid>
-      </div>
-    </SectionContainer>
+            </AboutContent>
+          </AboutGrid>
+        </div>
+      </SectionContainer>
+      <SectionDivider />
+    </>
   );
 };
 

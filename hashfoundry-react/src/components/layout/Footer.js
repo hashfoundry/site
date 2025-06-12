@@ -6,9 +6,10 @@ import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
 
 const FooterContainer = styled.footer`
-  background: ${props => props.theme === 'light' ? 'var(--light-bg-secondary)' : 'var(--dark-bg-secondary)'};
-  padding: 4rem 0 2rem;
-  border-top: 1px solid ${props => props.theme === 'light' ? 'var(--light-border)' : 'var(--dark-border)'};
+  background-color: ${props => props.theme === 'light' ? 'var(--light-footer-bg)' : 'var(--dark-footer-bg)'};
+  color: ${props => props.theme === 'light' ? 'var(--light-text)' : 'var(--dark-text)'};
+  padding: 3rem 0 1.5rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 `;
 
 const FooterGrid = styled.div`

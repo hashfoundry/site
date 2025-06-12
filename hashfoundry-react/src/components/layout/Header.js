@@ -7,7 +7,7 @@ import { ThemeContext } from '../../context/ThemeContext';
 // import useTranslation from '../../hooks/useTranslation';
 
 const HeaderContainer = styled.header`
-  background-color: ${props => props.theme === 'light' ? 'var(--light-bg)' : 'var(--dark-bg)'};
+  background-color: ${props => props.theme === 'light' ? 'var(--light-header-bg)' : 'var(--dark-header-bg)'};
   color: ${props => props.theme === 'light' ? 'var(--light-text)' : 'var(--dark-text)'};
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@ const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 1.1rem 0;
 `;
 
 const Nav = styled.nav`

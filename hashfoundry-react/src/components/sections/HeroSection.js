@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
+import SectionDivider from '../ui/SectionDivider';
 
 const HeroSectionWrapper = styled.section`
   padding: 2rem 0;
+  background-color: ${props => props.theme === 'light' ? 'var(--light-hero-bg)' : 'var(--dark-hero-bg)'};
 `;
 
 const HeroContainer = styled.div`
@@ -151,46 +153,49 @@ const HeroSection = () => {
   const translate = useTranslation();
   
   return (
-    <HeroSectionWrapper>
-      <HeroContainer>
-        <HeroContent>
-          <HeroTitle>
-            {translate('Production-Ready Web3 Infrastructure for Enterprise Scale', 'Production-Ready Web3 инфраструктура корпоративного уровня')}
-          </HeroTitle>
-          <HeroSubtitle>
-            {translate('Building the critical foundation for decentralized applications with uncompromising security', 'Создаем критически важный фундамент для децентрализованных приложений с бескомпромиссной безопасностью')}
-          </HeroSubtitle>
-          <HeroButtons>
-            <Button href="#solutions" className="primary">
-              {translate('Explore solutions', 'Изучить решения')}
-            </Button>
-            <Button href="#contact" className="secondary">
-              {translate('Contact Us', 'Связаться с нами')}
-            </Button>
-          </HeroButtons>
-        </HeroContent>
-        <HeroVisual>
-          <MetricsContainer>
-            <MetricItem>
-              <MetricValue>99.99%</MetricValue>
-              <MetricLabel>{translate('Uptime', 'Время работы')}</MetricLabel>
-            </MetricItem>
-            <MetricItem>
-              <MetricValue>256</MetricValue>
-              <MetricLabel>{translate('Actoa Media', 'Actoa Media')}</MetricLabel>
-            </MetricItem>
-            <MetricItem>
-              <MetricValue>15,000 TPS</MetricValue>
-              <MetricLabel>{translate('World/atsag Mone Groist', 'World/atsag Mone Groist')}</MetricLabel>
-            </MetricItem>
-            <MetricItem>
-              <MetricValue>25 ms</MetricValue>
-              <MetricLabel>{translate('Latency', 'Задержка')}</MetricLabel>
-            </MetricItem>
-          </MetricsContainer>
-        </HeroVisual>
-      </HeroContainer>
-    </HeroSectionWrapper>
+    <>
+      <HeroSectionWrapper theme={theme}>
+        <HeroContainer>
+          <HeroContent>
+            <HeroTitle>
+              {translate('Production-Ready Web3 Infrastructure for Enterprise Scale', 'Production-Ready Web3 инфраструктура корпоративного уровня')}
+            </HeroTitle>
+            <HeroSubtitle>
+              {translate('Building the critical foundation for decentralized applications with uncompromising security', 'Создаем критически важный фундамент для децентрализованных приложений с бескомпромиссной безопасностью')}
+            </HeroSubtitle>
+            <HeroButtons>
+              <Button href="#solutions" className="primary">
+                {translate('Explore solutions', 'Изучить решения')}
+              </Button>
+              <Button href="#contact" className="secondary">
+                {translate('Contact Us', 'Связаться с нами')}
+              </Button>
+            </HeroButtons>
+          </HeroContent>
+          <HeroVisual>
+            <MetricsContainer>
+              <MetricItem>
+                <MetricValue>99.99%</MetricValue>
+                <MetricLabel>{translate('Uptime', 'Время работы')}</MetricLabel>
+              </MetricItem>
+              <MetricItem>
+                <MetricValue>256</MetricValue>
+                <MetricLabel>{translate('Actoa Media', 'Actoa Media')}</MetricLabel>
+              </MetricItem>
+              <MetricItem>
+                <MetricValue>15,000 TPS</MetricValue>
+                <MetricLabel>{translate('World/atsag Mone Groist', 'World/atsag Mone Groist')}</MetricLabel>
+              </MetricItem>
+              <MetricItem>
+                <MetricValue>25 ms</MetricValue>
+                <MetricLabel>{translate('Latency', 'Задержка')}</MetricLabel>
+              </MetricItem>
+            </MetricsContainer>
+          </HeroVisual>
+        </HeroContainer>
+      </HeroSectionWrapper>
+      <SectionDivider />
+    </>
   );
 };
 

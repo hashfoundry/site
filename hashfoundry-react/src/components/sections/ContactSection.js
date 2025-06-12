@@ -5,9 +5,11 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faLinkedin, faGithub, faDiscord, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
+import SectionDivider from '../ui/SectionDivider';
 
 const SectionContainer = styled.section`
   padding: 5rem 0;
+  background-color: ${props => props.theme === 'light' ? 'var(--light-contact-bg)' : 'var(--dark-contact-bg)'};
 `;
 
 const SectionHeader = styled.div`
@@ -215,42 +217,45 @@ const ContactSection = () => {
   };
 
   return (
-    <SectionContainer id="contact">
-      <div className="container">
-        <SectionHeader>
-          <SectionTitle>
-            {translate('Connect With Us', 'Свяжитесь с нами')}
-          </SectionTitle>
-          <SectionSubtitle theme={theme}>
-            {translate('Let\'s build the decentralized future together', 'Давайте вместе построим децентрализованное будущее')}
-          </SectionSubtitle>
-        </SectionHeader>
+    <>
+      <SectionContainer id="contact" theme={theme}>
+        <div className="container">
+          <SectionHeader>
+            <SectionTitle>
+              {translate('Connect With Us', 'Свяжитесь с нами')}
+            </SectionTitle>
+            <SectionSubtitle theme={theme}>
+              {translate('Let\'s build the decentralized future together', 'Давайте вместе построим децентрализованное будущее')}
+            </SectionSubtitle>
+          </SectionHeader>
 
-        <ContactGrid>
-          <ContactInfo>
-            <ContactCard theme={theme}>
-              <h3>{translate('Contact Information', 'Контактная информация')}</h3>
-              <ContactDetails theme={theme}>
-                <p>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <a href="mailto:info@hashfoundry.tech">info@hashfoundry.tech</a>
-                </p>
-              </ContactDetails>
+          <ContactGrid>
+            <ContactInfo>
+              <ContactCard theme={theme}>
+                <h3>{translate('Contact Information', 'Контактная информация')}</h3>
+                <ContactDetails theme={theme}>
+                  <p>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <a href="mailto:info@hashfoundry.tech">info@hashfoundry.tech</a>
+                  </p>
+                </ContactDetails>
 
-              <h3>{translate('Follow Us', 'Подписывайтесь')}</h3>
-              <SocialLinks>
-                <SocialLink href="https://x.com/hashfnd" theme={theme}>
-                  <FontAwesomeIcon icon={faTwitter} />
-                </SocialLink>
-                <SocialLink href="https://github.com/hashfoundry" theme={theme}>
-                  <FontAwesomeIcon icon={faGithub} />
-                </SocialLink>
-              </SocialLinks>
-            </ContactCard>
-          </ContactInfo>
-        </ContactGrid>
-      </div>
-    </SectionContainer>
+                <h3>{translate('Follow Us', 'Подписывайтесь')}</h3>
+                <SocialLinks>
+                  <SocialLink href="https://x.com/hashfnd" theme={theme}>
+                    <FontAwesomeIcon icon={faTwitter} />
+                  </SocialLink>
+                  <SocialLink href="https://github.com/hashfoundry" theme={theme}>
+                    <FontAwesomeIcon icon={faGithub} />
+                  </SocialLink>
+                </SocialLinks>
+              </ContactCard>
+            </ContactInfo>
+          </ContactGrid>
+        </div>
+      </SectionContainer>
+      <SectionDivider />
+    </>
   );
 };
 

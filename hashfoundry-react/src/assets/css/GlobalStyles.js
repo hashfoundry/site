@@ -19,14 +19,33 @@ const GlobalStyles = createGlobalStyle`
     --light-card-bg: #FFFFFF;
     --light-hover: #F0F2F5;
     
+    /* Light theme section backgrounds */
+    --light-header-bg: #FFFFFF;
+    --light-hero-bg: #E6F0FF;
+    --light-about-bg: #DCE8FF;
+    --light-solutions-bg: #D2E0FF;
+    --light-technology-bg: #C8D8FF;
+    --light-contact-bg: #BED0FF;
+    --light-footer-bg: #FFFFFF;
+    --light-divider: #FFFFFF;
+    
     /* Dark theme */
-    --dark-bg: #0F1624;
     --dark-bg-secondary: #1A1F2E;
     --dark-text: #F0F2F5;
     --dark-text-secondary: #B4B9C6;
     --dark-border: #2D3748;
     --dark-card-bg: #1A1F2E;
     --dark-hover: #2D3748;
+    
+    /* Dark theme section backgrounds */
+    --dark-header-bg: #0B1733;
+    --dark-hero-bg: #11204B;
+    --dark-about-bg: #1A2A60;
+    --dark-solutions-bg: #253478;
+    --dark-technology-bg: #2F3FA0;
+    --dark-contact-bg: #3A4BD0;
+    --dark-footer-bg: #081027;
+    --dark-divider: #0B1733;
     
     /* Common */
     --success: #48BB78;

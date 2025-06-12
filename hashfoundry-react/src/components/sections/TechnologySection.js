@@ -2,9 +2,11 @@ import React, { useState, useContext, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
+import SectionDivider from '../ui/SectionDivider';
 
 const SectionContainer = styled.section`
   padding: 5rem 0;
+  background-color: ${props => props.theme === 'light' ? 'var(--light-technology-bg)' : 'var(--dark-technology-bg)'};
 `;
 
 const SectionHeader = styled.div`
@@ -281,53 +283,56 @@ const TechnologySection = () => {
   ];
 
   return (
-    <SectionContainer id="technology">
-      <div className="container">
-        <SectionHeader>
-          <SectionTitle>
-            {translate('Our Technology', 'Наши технологии')}
-          </SectionTitle>
-          <SectionSubtitle theme={theme}>
-            {translate('Powered by innovation and built for the future', 'Работает на инновациях и создано для будущего')}
-          </SectionSubtitle>
-        </SectionHeader>
-        
-        <TechnologyShowcase>
-          <TechVisual>
-            <div ref={visualizationRef} style={{ width: '100%', height: '100%' }}></div>
-          </TechVisual>
+    <>
+      <SectionContainer id="technology" theme={theme}>
+        <div className="container">
+          <SectionHeader>
+            <SectionTitle>
+              {translate('Our Technology', 'Наши технологии')}
+            </SectionTitle>
+            <SectionSubtitle theme={theme}>
+              {translate('Powered by innovation and built for the future', 'Работает на инновациях и создано для будущего')}
+            </SectionSubtitle>
+          </SectionHeader>
           
-          <TechDetails>
-            <TechTabs>
-              {tabs.map(tab => (
-                <TechTab 
-                  key={tab.id}
-                  active={activeTab === tab.id}
-                  theme={theme}
-                  onClick={() => setActiveTab(tab.id)}
-                >
-                  {tab.label}
-                </TechTab>
-              ))}
-            </TechTabs>
+          <TechnologyShowcase>
+            <TechVisual>
+              <div ref={visualizationRef} style={{ width: '100%', height: '100%' }}></div>
+            </TechVisual>
             
-            <TechContent>
-              {tabs.map(tab => (
-                <TechPanel key={tab.id} active={activeTab === tab.id}>
-                  <TechPanelTitle>{tab.title}</TechPanelTitle>
-                  <TechPanelDescription theme={theme}>{tab.description}</TechPanelDescription>
-                  <TechFeatures>
-                    {tab.features.map((feature, index) => (
-                      <TechFeatureItem key={index} theme={theme}>{feature}</TechFeatureItem>
-                    ))}
-                  </TechFeatures>
-                </TechPanel>
-              ))}
-            </TechContent>
-          </TechDetails>
-        </TechnologyShowcase>
-      </div>
-    </SectionContainer>
+            <TechDetails>
+              <TechTabs>
+                {tabs.map(tab => (
+                  <TechTab 
+                    key={tab.id}
+                    active={activeTab === tab.id}
+                    theme={theme}
+                    onClick={() => setActiveTab(tab.id)}
+                  >
+                    {tab.label}
+                  </TechTab>
+                ))}
+              </TechTabs>
+              
+              <TechContent>
+                {tabs.map(tab => (
+                  <TechPanel key={tab.id} active={activeTab === tab.id}>
+                    <TechPanelTitle>{tab.title}</TechPanelTitle>
+                    <TechPanelDescription theme={theme}>{tab.description}</TechPanelDescription>
+                    <TechFeatures>
+                      {tab.features.map((feature, index) => (
+                        <TechFeatureItem key={index} theme={theme}>{feature}</TechFeatureItem>
+                      ))}
+                    </TechFeatures>
+                  </TechPanel>
+                ))}
+              </TechContent>
+            </TechDetails>
+          </TechnologyShowcase>
+        </div>
+      </SectionContainer>
+      <SectionDivider />
+    </>
   );
 };
 

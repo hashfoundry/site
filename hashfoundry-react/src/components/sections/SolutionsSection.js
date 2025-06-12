@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faServer, faBrain, faCodeBranch, faShieldAlt, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
+import SectionDivider from '../ui/SectionDivider';
 
 const SectionContainer = styled.section`
   padding: 5rem 0;
+  background-color: ${props => props.theme === 'light' ? 'var(--light-solutions-bg)' : 'var(--dark-solutions-bg)'};
 `;
 
 const SectionHeader = styled.div`
@@ -125,30 +127,33 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <SectionContainer id="solutions">
-      <div className="container">
-        <SectionHeader>
-          <SectionTitle>
-            {translate('Our Solutions', 'Наши решения')}
-          </SectionTitle>
-          <SectionSubtitle theme={theme}>
-            {translate('Cutting-edge infrastructure for the decentralized ecosystem', 'Передовая инфраструктура для децентрализованной экосистемы')}
-          </SectionSubtitle>
-        </SectionHeader>
-        
-        <SolutionsGrid>
-          {solutions.map((solution, index) => (
-            <SolutionCard key={index} theme={theme}>
-              <SolutionIcon>
-                <FontAwesomeIcon icon={solution.icon} />
-              </SolutionIcon>
-              <SolutionTitle>{solution.title}</SolutionTitle>
-              <SolutionDescription theme={theme}>{solution.description}</SolutionDescription>
-            </SolutionCard>
-          ))}
-        </SolutionsGrid>
-      </div>
-    </SectionContainer>
+    <>
+      <SectionContainer id="solutions" theme={theme}>
+        <div className="container">
+          <SectionHeader>
+            <SectionTitle>
+              {translate('Our Solutions', 'Наши решения')}
+            </SectionTitle>
+            <SectionSubtitle theme={theme}>
+              {translate('Cutting-edge infrastructure for the decentralized ecosystem', 'Передовая инфраструктура для децентрализованной экосистемы')}
+            </SectionSubtitle>
+          </SectionHeader>
+          
+          <SolutionsGrid>
+            {solutions.map((solution, index) => (
+              <SolutionCard key={index} theme={theme}>
+                <SolutionIcon>
+                  <FontAwesomeIcon icon={solution.icon} />
+                </SolutionIcon>
+                <SolutionTitle>{solution.title}</SolutionTitle>
+                <SolutionDescription theme={theme}>{solution.description}</SolutionDescription>
+              </SolutionCard>
+            ))}
+          </SolutionsGrid>
+        </div>
+      </SectionContainer>
+      <SectionDivider />
+    </>
   );
 };
 
