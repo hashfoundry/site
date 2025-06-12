@@ -32,9 +32,9 @@ const SectionSubtitle = styled.p`
 
 const AboutGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 4rem;
-  align-items: center;
+  align-items: flex-start;
   
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
@@ -68,6 +68,29 @@ const AboutContent = styled.div`
   
   p {
     color: ${props => props.theme === 'light' ? 'var(--light-text-secondary)' : 'var(--dark-text-secondary)'};
+  }
+  
+  &.main-content {
+    padding-right: 2rem;
+  }
+  
+  &.secondary-content {
+    border-left: 2px solid var(--primary-color);
+    padding-left: 2rem;
+  }
+  
+  @media (max-width: 992px) {
+    &.main-content {
+      padding-right: 0;
+    }
+    
+    &.secondary-content {
+      border-left: none;
+      border-top: 2px solid var(--primary-color);
+      padding-left: 0;
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
   }
 `;
 
@@ -117,16 +140,7 @@ const AboutSection = () => {
           </SectionHeader>
           
           <AboutGrid>
-            <AboutImage>
-              <img 
-                src="https://imagedelivery.net/xMnwd1aoy-PQ8Klk2JdGdw/59c1fd70-2a9d-4993-d3a2-0ed212ba1600/public" 
-                alt="HashFoundry team collaborating on cutting-edge blockchain solutions in a modern tech workspace" 
-                width="600" 
-                height="400"
-              />
-            </AboutImage>
-            
-            <AboutContent theme={theme}>
+            <AboutContent className="main-content" theme={theme}>
               <h3>{translate('Our Vision', 'Наше видение')}</h3>
               <p>
                 {translate(
@@ -142,7 +156,16 @@ const AboutSection = () => {
                   'Наша миссия — ускорить внедрение Web3, предоставляя инфраструктуру и инструменты корпоративного уровня, которые устраняют разрыв между традиционными системами и децентрализованными технологиями. Наши решения, улучшенные с помощью ИИ, делают блокчейн более доступным, масштабируемым и удобным для разработчиков и предприятий.'
                 )}
               </p>
-
+            </AboutContent>
+            
+            <AboutContent className="secondary-content" theme={theme}>
+              <h3>{translate('Our Approach', 'Наш подход')}</h3>
+              <p>
+                {translate(
+                  'We combine cutting-edge blockchain technology with artificial intelligence to create solutions that are not just powerful, but also intuitive and adaptable to the evolving needs of the Web3 ecosystem.',
+                  'Мы объединяем передовые технологии блокчейна с искусственным интеллектом для создания решений, которые не только мощные, но и интуитивно понятные и адаптируемые к меняющимся потребностям экосистемы Web3.'
+                )}
+              </p>
             </AboutContent>
           </AboutGrid>
         </div>
