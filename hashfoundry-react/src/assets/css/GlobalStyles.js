@@ -16,36 +16,37 @@ const GlobalStyles = createGlobalStyle`
     --light-text: #1A1A2E;
     --light-text-secondary: #4A4A68;
     --light-border: #E2E8F0;
-    --light-card-bg: #FFFFFF;
+    --light-card-bg: #DEECF8;
     --light-hover: #F0F2F5;
     
     /* Light theme section backgrounds */
     --light-header-bg: #FFFFFF;
     --light-hero-bg: #E6F0FF;
-    --light-about-bg: #DCE8FF;
-    --light-solutions-bg: #D2E0FF;
-    --light-technology-bg: #C8D8FF;
-    --light-contact-bg: #BED0FF;
-    --light-footer-bg: #FFFFFF;
+    --light-about-bg: #EAF4FA;
+    --light-solutions-bg: #E2EFF7;
+    --light-technology-bg: #DAE9F4;
+    --light-contact-bg: #D2E4F1;
+    --light-footer-bg: #F5F5F7;
     --light-divider: #FFFFFF;
     
     /* Dark theme */
+    --dark-bg: #000d29;
     --dark-bg-secondary: #1A1F2E;
     --dark-text: #F0F2F5;
     --dark-text-secondary: #B4B9C6;
     --dark-border: #2D3748;
-    --dark-card-bg: #0E0E0E;
+    --dark-card-bg: #132042;
     --dark-hover: #2D3748;
     
     /* Dark theme section backgrounds */
-    --dark-header-bg: #000000;
+    --dark-header-bg: #000519;
     --dark-hero-bg: #0E1B34;
-    --dark-about-bg: #0C182F;
-    --dark-solutions-bg: #0A1530;
-    --dark-technology-bg: #08122A;
-    --dark-contact-bg: #061024;
-    --dark-footer-bg: #0E0E0E;
-    --dark-divider: #000000;
+    --dark-about-bg: #001636;
+    --dark-solutions-bg: #001b3d;
+    --dark-technology-bg: #002040;
+    --dark-contact-bg: #002141;
+    --dark-footer-bg: #000510;
+    --dark-divider: #000519;
     
     /* Common */
     --success: #48BB78;
