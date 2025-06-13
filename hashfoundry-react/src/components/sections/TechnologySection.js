@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
@@ -32,28 +32,12 @@ const SectionSubtitle = styled.p`
 
 const TechnologyShowcase = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  
-  @media (max-width: 992px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
 `;
 
-const TechVisual = styled.div`
-  width: 100%;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  background: var(--dark-bg-secondary);
-  border-radius: 8px;
-  
-  @media (max-width: 992px) {
-    display: none;
-  }
-`;
 
 const TechDetails = styled.div``;
 
@@ -144,81 +128,6 @@ const TechnologySection = () => {
   const [activeTab, setActiveTab] = useState('blockchain');
   const { theme } = useContext(ThemeContext);
   const translate = useTranslation();
-  const visualizationRef = useRef(null);
-
-  useEffect(() => {
-    if (visualizationRef.current) {
-      createTechVisualization();
-    }
-  }, []);
-
-  const createTechVisualization = () => {
-    if (!visualizationRef.current) return;
-    
-    // Create elements for the visualization
-    for (let i = 0; i < 50; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'tech-particle';
-      particle.style.position = 'absolute';
-      particle.style.width = '4px';
-      particle.style.height = '4px';
-      particle.style.borderRadius = '50%';
-      particle.style.backgroundColor = `hsl(${240 + Math.random() * 60}, 80%, 65%)`;
-      particle.style.opacity = Math.random() * 0.7 + 0.3;
-      
-      // Random initial position
-      particle.style.left = `${Math.random() * 100}%`;
-      particle.style.top = `${Math.random() * 100}%`;
-      
-      // Animation properties
-      const duration = 15 + Math.random() * 30;
-      const delay = Math.random() * 5;
-      
-      particle.style.animation = `float ${duration}s ${delay}s infinite linear`;
-      
-      visualizationRef.current.appendChild(particle);
-    }
-    
-    // Add CSS animation
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes float {
-        0% {
-          transform: translate(0, 0);
-        }
-        25% {
-          transform: translate(${Math.random() * 100}px, ${Math.random() * 100}px);
-        }
-        50% {
-          transform: translate(${Math.random() * -100}px, ${Math.random() * 100}px);
-        }
-        75% {
-          transform: translate(${Math.random() * -100}px, ${Math.random() * -100}px);
-        }
-        100% {
-          transform: translate(0, 0);
-        }
-      }
-    `;
-    document.head.appendChild(style);
-    
-    // Create network lines
-    for (let i = 0; i < 20; i++) {
-      const line = document.createElement('div');
-      line.className = 'tech-line';
-      line.style.position = 'absolute';
-      line.style.height = '1px';
-      line.style.width = `${30 + Math.random() * 40}%`;
-      line.style.backgroundColor = `hsl(${240 + Math.random() * 60}, 60%, 50%, 0.3)`;
-      
-      // Random position and rotation
-      line.style.left = `${Math.random() * 100}%`;
-      line.style.top = `${Math.random() * 100}%`;
-      line.style.transform = `rotate(${Math.random() * 360}deg)`;
-      
-      visualizationRef.current.appendChild(line);
-    }
-  };
 
   const tabs = [
     {
@@ -296,10 +205,6 @@ const TechnologySection = () => {
           </SectionHeader>
           
           <TechnologyShowcase>
-            <TechVisual>
-              <div ref={visualizationRef} style={{ width: '100%', height: '100%' }}></div>
-            </TechVisual>
-            
             <TechDetails>
               <TechTabs>
                 {tabs.map(tab => (
