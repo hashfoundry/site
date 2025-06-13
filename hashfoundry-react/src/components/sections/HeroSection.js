@@ -3,10 +3,31 @@ import styled from 'styled-components';
 import { ThemeContext } from '../../context/ThemeContext';
 import useTranslation from '../../hooks/useTranslation';
 import SectionDivider from '../ui/SectionDivider';
+import lightBg from '../../assets/images/HeroSectionLightBG.png';
+import darkBg from '../../assets/images/HeroSectionDarkBG.png';
 
 const HeroSectionWrapper = styled.section`
   padding: 2rem 0;
   background-color: ${props => props.theme === 'light' ? 'var(--light-hero-bg)' : 'var(--dark-hero-bg)'};
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: ${props => props.theme === 'light' 
+      ? `url(${lightBg})`
+      : `url(${darkBg})`
+    };
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    z-index: 0;
+  }
 `;
 
 const HeroContainer = styled.div`
@@ -17,6 +38,8 @@ const HeroContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 1;
   
   @media (max-width: 992px) {
     flex-direction: column;
