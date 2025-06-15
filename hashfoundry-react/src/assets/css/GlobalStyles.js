@@ -139,6 +139,11 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     transition: all 0.3s ease;
   }
+  
+  /* Add scroll margin to sections for better navigation */
+  section[id] {
+    scroll-margin-top: 5rem; /* Adjust this value based on your header height */
+  }
 
   /* Responsive Design */
   @media (max-width: 992px) {
