@@ -202,12 +202,12 @@ const HeroSection = () => {
                 <MetricLabel>{translate('Uptime', 'Время работы')}</MetricLabel>
               </MetricItem>
               <MetricItem>
-                <MetricValue>256</MetricValue>
-                <MetricLabel>{translate('Actoa Media', 'Actoa Media')}</MetricLabel>
+                <MetricValue>125</MetricValue>
+                <MetricLabel>{translate('Active nodes count', 'Количество активных нод')}</MetricLabel>
               </MetricItem>
               <MetricItem>
                 <MetricValue>15,000 TPS</MetricValue>
-                <MetricLabel>{translate('World/atsag Mone Groist', 'World/atsag Mone Groist')}</MetricLabel>
+                <MetricLabel>{translate('Транзакций в секунду', 'Транзакций в секунду')}</MetricLabel>
               </MetricItem>
               <MetricItem>
                 <MetricValue>25 ms</MetricValue>
