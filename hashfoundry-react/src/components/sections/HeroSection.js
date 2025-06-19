@@ -207,7 +207,7 @@ const HeroSection = () => {
               </MetricItem>
               <MetricItem>
                 <MetricValue>15,000 TPS</MetricValue>
-                <MetricLabel>{translate('Транзакций в секунду', 'Транзакций в секунду')}</MetricLabel>
+                <MetricLabel>{translate('Transactions per second', 'Транзакций в секунду')}</MetricLabel>
               </MetricItem>
               <MetricItem>
                 <MetricValue>25 ms</MetricValue>
