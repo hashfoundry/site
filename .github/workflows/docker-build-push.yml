@@ -21,7 +21,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_HUB_USER }}
+          username: ${{ vars.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PAT }}
       
       - name: Build and push
@@ -31,7 +31,7 @@ jobs:
           file: ./hashfoundry-react/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USER }}/hashfoundry-react:latest
-            ${{ secrets.DOCKER_HUB_USER }}/hashfoundry-react:${{ github.sha }}
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USER }}/hashfoundry-react:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USER }}/hashfoundry-react:buildcache,mode=max
+            ${{ vars.DOCKER_HUB_USER }}/hashfoundry-react:latest
+            ${{ vars.DOCKER_HUB_USER }}/hashfoundry-react:${{ github.sha }}
+          cache-from: type=registry,ref=${{ vars.DOCKER_HUB_USER }}/hashfoundry-react:buildcache
+          cache-to: type=registry,ref=${{ vars.DOCKER_HUB_USER }}/hashfoundry-react:buildcache,mode=max
