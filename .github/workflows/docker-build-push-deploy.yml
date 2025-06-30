@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: Build, Push and Deploy Docker Image
 
 on:
   push:
@@ -35,3 +35,14 @@ jobs:
             ${{ vars.DOCKER_HUB_USER }}/hashfoundry-react:${{ github.sha }}
           cache-from: type=registry,ref=${{ vars.DOCKER_HUB_USER }}/hashfoundry-react:buildcache
           cache-to: type=registry,ref=${{ vars.DOCKER_HUB_USER }}/hashfoundry-react:buildcache,mode=max
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Deploy to environment
+        uses: hashfoundry/infra/.github/workflows/deploy_hashfoundry-react.yml@main
+        with:
+          tag: ${{ github.sha }}
+          env: dev
