@@ -210,7 +210,7 @@ const Header = () => {
           <Nav>
             <a href="/" style={{ textDecoration: 'none' }}>
               <Logo>
-                <LogoText theme={theme}>Hash<Highlight>Foundry</Highlight></LogoText>
+                <LogoText theme={theme}>Hash<Highlight>Foundry2</Highlight></LogoText>
               </Logo>
             </a>
             
